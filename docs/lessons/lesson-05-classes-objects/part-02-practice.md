@@ -48,7 +48,7 @@ La práctica convierte variables sueltas en un modelo simple. Es el puente entre
 
 El editor de abajo ya tiene la clase `Player` y el `Main`. Crea un objeto `Player` y llama sus métodos.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 class Player {
     private String name;
     private int score;

@@ -48,7 +48,7 @@ La calculadora es pequeña, pero enseña dos ideas centrales para cualquier prog
 
 El editor de abajo ya tiene la estructura de la calculadora. Completa el método `add` y presiona **Run**.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 import java.util.Scanner;
 
 public class Main {

@@ -56,7 +56,7 @@ Al finalizar, el estudiante tendrá:
 
 No necesitas salir de esta página. El editor de abajo ya tiene el código starter. Modifícalo, presiona **Run** y ve el resultado en la consola.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World");

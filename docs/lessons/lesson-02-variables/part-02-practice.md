@@ -57,7 +57,7 @@ Lo importante no es la ficha en sí. Lo importante es entender que cada dato viv
 
 El editor de abajo ya tiene el código base con variables. Modifica los valores, presiona **Run** y ve el resultado.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 public class Main {
     public static void main(String[] args) {
         String studentName = "Valeria";

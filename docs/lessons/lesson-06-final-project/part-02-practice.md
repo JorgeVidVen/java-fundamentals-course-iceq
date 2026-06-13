@@ -48,7 +48,7 @@ La práctica final no busca añadir temas nuevos. Busca integrar lo aprendido en
 
 El editor de abajo tiene el juego completo. Ejecútalo, juega unas partidas, luego modifícalo.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 import java.util.Scanner;
 import java.util.Random;
 

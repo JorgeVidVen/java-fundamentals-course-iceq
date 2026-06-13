@@ -37,3 +37,4 @@ target/
 
 # Keep repository assets, docs, scripts, starter files, completed examples and .github tracked.
 
+.vercel

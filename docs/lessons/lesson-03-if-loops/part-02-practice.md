@@ -48,7 +48,7 @@ La práctica introduce reglas, intentos y repetición controlada mediante un eje
 
 El editor de abajo ya tiene el código base con el número secreto. Modifica el bucle y las condiciones, presiona **Run** y prueba.
 
-<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="6">
 public class Main {
     public static void main(String[] args) {
         int secretNumber = 7;
