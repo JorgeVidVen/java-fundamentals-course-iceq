@@ -61,9 +61,9 @@ scripts/
 5. Comparar la práctica terminada con `completed-examples`.
 6. Revisar `course-plan.md` para enlaces pendientes y evidencias del curso.
 
-## Nota Sobre Java En Este Repositorio
 
-Cada carpeta de `starter-files` y `completed-examples` está pensada para copiarse y ejecutarse como un Repl independiente. Por eso varias lecciones tienen una clase `Main` en el default package. Si un IDE local intenta compilar todas las carpetas a la vez, puede marcar clases duplicadas; la validación correcta es compilar cada lección por separado.
+>[!NOTE]
+> **Cada carpeta de `starter-files` y `completed-examples` está pensada para copiarse y ejecutarse como un Repl independiente. Por eso varias lecciones tienen una clase `Main` en el default package. Si un IDE local intenta compilar todas las carpetas a la vez, puede marcar clases duplicadas; la validación correcta es compilar cada lección por separado.**
 
 ## Reglas de comunicación
 
