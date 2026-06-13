@@ -57,8 +57,15 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Upload Gemfile.lock
-        uses: actions/upload-artifact@v4
-        with:
-          name: Gemfile.lock
-          path: Gemfile.lock
+      - name: Commit Gemfile.lock if changed
+        run: |
+          if git diff --exit-code Gemfile.lock; then
+            echo "Gemfile.lock unchanged"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Gemfile.lock
+            git commit -m "chore: update Gemfile.lock [skip ci]"
+            git push
+          fi
+        shell: bash
