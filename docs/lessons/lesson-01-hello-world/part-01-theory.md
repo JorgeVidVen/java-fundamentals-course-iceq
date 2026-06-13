@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-01-banner.png" alt="Primer programa en Java" width="100%">
 </p>

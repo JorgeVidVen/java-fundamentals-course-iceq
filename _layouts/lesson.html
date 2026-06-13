@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="lesson-container">
+  <aside class="lesson-sidebar" id="lessonSidebar">
+    <div class="sidebar-toc">
+      <h3>En esta página</h3>
+      <ul id="tocList"></ul>
+    </div>
+    <div class="sidebar-progress">
+      <h3>Progreso</h3>
+      <div class="mini-progress-bar">
+        <div class="mini-progress-fill" id="miniProgressFill" style="width: 0%"></div>
+      </div>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="sidebar-nav">
+      <a href="{{ '/docs/lessons/' | relative_url }}" class="btn btn-small">← Todas las lecciones</a>
+    </div>
+  </aside>
+
+  <article class="lesson-content">
+    <div class="lesson-meta">
+      <span class="lesson-badge" id="lessonBadge"></span>
+      <span class="lesson-xp" id="lessonXP"></span>
+    </div>
+
+    <div id="lessonBody">
+      {{ content }}
+    </div>
+
+    <div class="lesson-complete">
+      <button class="btn btn-primary" id="markCompleteBtn">✓ Marcar como completada</button>
+    </div>
+  </article>
+</div>
+
+<script src="{{ '/assets/js/lesson.js' | relative_url }}"></script>

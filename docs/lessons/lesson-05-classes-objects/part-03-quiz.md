@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-05-banner.png" alt="Clases y objetos" width="100%">
 </p>

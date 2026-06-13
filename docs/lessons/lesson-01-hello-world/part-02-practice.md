@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-01-banner.png" alt="Primer programa en Java" width="100%">
 </p>
@@ -45,6 +49,22 @@ Al finalizar, el estudiante tendrá:
 - una modificación personalizada;
 - al menos un error provocado y corregido;
 - una explicación breve de qué hace `System.out.println`.
+
+---
+
+## Pruébalo aquí mismo 🚀
+
+No necesitas salir de esta página. El editor de abajo ya tiene el código starter. Modifícalo, presiona **Run** y ve el resultado en la consola.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World");
+    }
+}
+</div>
+
+> **Consejo:** cambia el texto dentro de las comillas y presiona Run otra vez. También puedes usar Replit si prefieres un entorno más completo (ver más abajo).
 
 ---
 

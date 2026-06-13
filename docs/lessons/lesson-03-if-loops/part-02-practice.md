@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-03-banner.png" alt="Condiciones y bucles" width="100%">
 </p>
@@ -39,6 +43,29 @@ La práctica introduce reglas, intentos y repetición controlada mediante un eje
 4. Lee la consola. Si aparece un error, úsalo como pista.
 
 > **Respaldo:** si Replit no está disponible, usa OnlineGDB copiando los archivos Java de esta carpeta. La entrega oficial debe mantener Replit como enlace principal.
+
+## Pruébalo aquí mismo 🚀
+
+El editor de abajo ya tiene el código base con el número secreto. Modifica el bucle y las condiciones, presiona **Run** y prueba.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+public class Main {
+    public static void main(String[] args) {
+        int secretNumber = 7;
+        int guess = 7;
+        for (int i = 1; i <= 5; i++) {
+            if (guess == secretNumber) {
+                System.out.println("¡Acertaste!");
+                break;
+            } else {
+                System.out.println("Intento " + i + " incorrecto");
+            }
+        }
+    }
+}
+</div>
+
+> **Experimenta:** cambia `guess` a otro número, usa `>` y `<` para pistas de "mayor" y "menor".
 
 ## Trabajo paso a paso
 

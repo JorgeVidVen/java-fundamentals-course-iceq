@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-05-banner.png" alt="Clases y objetos" width="100%">
 </p>
@@ -39,6 +43,40 @@ La práctica convierte variables sueltas en un modelo simple. Es el puente entre
 4. Lee la consola. Si aparece un error, úsalo como pista.
 
 > **Respaldo:** si Replit no está disponible, usa JDoodle copiando los archivos Java de esta carpeta. La entrega oficial debe mantener Replit como enlace principal.
+
+## Pruébalo aquí mismo 🚀
+
+El editor de abajo ya tiene la clase `Player` y el `Main`. Crea un objeto `Player` y llama sus métodos.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+class Player {
+    private String name;
+    private int score;
+
+    Player(String name) {
+        this.name = name;
+        this.score = 0;
+    }
+
+    void addScore(int points) {
+        score += points;
+    }
+
+    void showStatus() {
+        System.out.println(name + " tiene " + score + " puntos");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Player p = new Player("Mario");
+        p.addScore(100);
+        p.showStatus();
+    }
+}
+</div>
+
+> **Experimenta:** crea un segundo jugador con otro nombre y dale puntos.
 
 ## Trabajo paso a paso
 

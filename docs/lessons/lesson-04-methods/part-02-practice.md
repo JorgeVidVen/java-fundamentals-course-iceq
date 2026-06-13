@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-04-banner.png" alt="Métodos y entrada por consola" width="100%">
 </p>
@@ -39,6 +43,33 @@ La calculadora es pequeña, pero enseña dos ideas centrales para cualquier prog
 4. Lee la consola. Si aparece un error, úsalo como pista.
 
 > **Respaldo:** si Replit no está disponible, usa OnlineGDB copiando los archivos Java de esta carpeta. La entrega oficial debe mantener Replit como enlace principal.
+
+## Pruébalo aquí mismo 🚀
+
+El editor de abajo ya tiene la estructura de la calculadora. Completa el método `add` y presiona **Run**.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int a = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int b = sc.nextInt();
+        int result = add(a, b);
+        System.out.println("La suma es: " + result);
+        sc.close();
+    }
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+</div>
+
+> **Experimenta:** agrega un método `multiply` y úsalo.
 
 ## Trabajo paso a paso
 
