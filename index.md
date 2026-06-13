@@ -4,12 +4,39 @@ title: Java Fundamentals Course ICEQ — World Map
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Java Fundamentals Course ICEQ — World Map</title>
   <meta name="description" content="Curso introductorio de Java para secundaria. 6 niveles estilo Mario Bros para aprender fundamentos de Java y POO.">
+  <!-- Mejora: metadatos sociales y JSON-LD ayudan a compartir y descubrir el curso. -->
+  <link rel="canonical" href="https://jorgevidven.github.io/java-fundamentals-course-iceq/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%AD%90%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Java Fundamentals Course ICEQ — World Map">
+  <meta property="og:description" content="Curso introductorio de Java para secundaria con 6 niveles, retos bonus y proyecto final estilo mapa retro.">
+  <meta property="og:url" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/">
+  <meta property="og:image" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/assets/banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Java Fundamentals Course ICEQ — World Map">
+  <meta name="twitter:description" content="Aprende Java en 6 niveles retro con Replit, retos bonus y una aventura final.">
+  <meta name="twitter:image" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/assets/banner.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Java Fundamentals Course ICEQ",
+      "description": "Curso introductorio de Java para estudiantes de secundaria con ruta de 6 niveles, práctica en Replit y proyecto final de consola.",
+      "inLanguage": "es",
+      "url": "https://jorgevidven.github.io/java-fundamentals-course-iceq/",
+      "provider": {
+        "@type": "Organization",
+        "name": "ICEQ",
+        "url": "https://github.com/JorgeVidVen/java-fundamentals-course-iceq"
+      }
+    }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
 
@@ -24,12 +51,13 @@ title: Java Fundamentals Course ICEQ — World Map
       --card-bg: #161638;
       --card-border: #2a2a5a;
       --text-light: #f0f0f0;
-      --text-muted: #8888aa;
+      --text-muted: #b8b8d6;
       --star-purple: #7B2D8E;
       --star-glow: #c084d0;
       --glow-red: rgba(229,37,33,0.3);
       --glow-gold: rgba(255,215,0,0.2);
       --glow-green: rgba(76,175,80,0.3);
+      --focus-ring: #ffffff;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -74,6 +102,18 @@ title: Java Fundamentals Course ICEQ — World Map
       z-index: 0;
     }
 
+    /* Mejora: parallax sutil de fondo sin JavaScript ni assets externos. */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 10% 90%, rgba(92,148,252,0.12), transparent 28%),
+        radial-gradient(ellipse at 88% 12%, rgba(255,215,0,0.08), transparent 24%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .wrapper {
       max-width: 1100px;
       margin: 0 auto;
@@ -84,6 +124,42 @@ title: Java Fundamentals Course ICEQ — World Map
 
     a { color: var(--sky-blue); text-decoration: none; transition: color 0.2s; }
     a:hover { color: var(--coin-gold); }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 4px;
+      box-shadow: 0 0 0 6px rgba(255,215,0,0.25);
+    }
+
+    /* Mejora: skip link y texto solo para lectores de pantalla facilitan navegación por teclado. */
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      z-index: 20;
+      transform: translateY(-140%);
+      background: var(--coin-gold);
+      color: #101020;
+      padding: 0.75rem 1rem;
+      border: 3px solid #101020;
+      border-radius: 6px;
+      font-size: 0.5rem;
+      transition: transform 0.2s;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     code {
       font-family: 'Courier New', monospace;
@@ -92,6 +168,65 @@ title: Java Fundamentals Course ICEQ — World Map
       border-radius: 3px;
       font-size: 0.8em;
     }
+
+    /* Mejora: tooltips CSS describen power-ups y atajos sin agregar librerías. */
+    [data-tooltip] {
+      position: relative;
+    }
+    [data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translate(-50%, 6px);
+      width: max-content;
+      max-width: min(240px, 80vw);
+      background: #050512;
+      color: var(--text-light);
+      border: 2px solid var(--coin-gold);
+      border-radius: 6px;
+      padding: 0.45rem 0.55rem;
+      font-size: 0.34rem;
+      line-height: 1.5;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 10;
+    }
+    [data-tooltip]:hover::after,
+    [data-tooltip]:focus-visible::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* Mejora: fade-in-up al entrar en viewport aporta ritmo sin bloquear contenido. */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.is-visible,
+    .no-js .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Mejora: bloques ? decorativos refuerzan estética retro sin afectar lectura. */
+    .question-block {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, #ffd85a, #c98717);
+      border: 3px solid #5c3300;
+      color: #4a2500;
+      box-shadow: inset -4px -4px 0 rgba(0,0,0,0.16), inset 4px 4px 0 rgba(255,255,255,0.28);
+      font-size: 0.85rem;
+      z-index: 1;
+    }
+    .qb-left { left: 1rem; bottom: 1rem; }
+    .qb-right { right: 1rem; top: 1rem; }
 
     /* ================================================================
        TITLE SCREEN
@@ -253,64 +388,35 @@ title: Java Fundamentals Course ICEQ — World Map
       margin: 0 auto;
     }
 
-    /* caminos decorativos entre tarjetas */
+    /* Mejora: caminos SVG conectan niveles como mapa de mundo y escalan mejor que divs absolutos. */
     .map-connections {
       position: absolute;
       inset: 0;
       pointer-events: none;
       z-index: 0;
     }
-    .map-connections .hline {
-      position: absolute;
-      height: 2px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--text-muted) 0,
-        var(--text-muted) 6px,
-        transparent 6px,
-        transparent 12px
-      );
-      opacity: 0.3;
-      transition: opacity 0.3s;
+    .map-connections svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: visible;
     }
-    .map-connections .vline {
-      position: absolute;
-      width: 2px;
-      background: repeating-linear-gradient(
-        0deg,
-        var(--text-muted) 0,
-        var(--text-muted) 6px,
-        transparent 6px,
-        transparent 12px
-      );
-      opacity: 0.3;
-      transition: opacity 0.3s;
+    .map-path {
+      fill: none;
+      stroke: rgba(255,215,0,0.38);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 10 10;
+      filter: drop-shadow(0 0 5px rgba(255,215,0,0.35));
+      transition: stroke 0.3s, stroke-dashoffset 0.3s;
     }
-    .map-connections .arrow {
-      position: absolute;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      opacity: 0.4;
-      transition: opacity 0.3s;
+    .map-dot {
+      fill: var(--coin-gold);
+      opacity: 0.72;
     }
-    /* horizontal lines: row 1 (cards 1-2, 2-3) */
-    .hline-1-2 { top: 22%; left: calc(33.33% + 10px); width: calc(33.33% - 20px); }
-    .hline-2-3 { top: 22%; left: calc(66.66% + 10px); width: calc(33.33% - 20px); }
-    /* horizontal lines: row 2 (cards 4-5, 5-6) */
-    .hline-4-5 { top: 72%; left: calc(33.33% + 10px); width: calc(33.33% - 20px); }
-    .hline-5-6 { top: 72%; left: calc(66.66% + 10px); width: calc(33.33% - 20px); }
-    /* vertical lines */
-    .vline-1 { left: calc(16.66% - 1px); top: calc(22% + 4px); height: calc(50% - 8px); }
-    .vline-2 { left: calc(50% - 1px); top: calc(22% + 4px); height: calc(50% - 8px); }
-    .vline-3 { left: calc(83.33% - 1px); top: calc(22% + 4px); height: calc(50% - 8px); }
-    /* arrows */
-    .arrow-r1 { top: calc(22% - 10px); left: calc(66.66% - 4px); }
-    .arrow-r2 { top: calc(72% - 10px); left: calc(66.66% - 4px); }
-
-    .map-container:hover .hline,
-    .map-container:hover .vline,
-    .map-container:hover .arrow {
-      opacity: 0.6;
+    .map-container:hover .map-path {
+      stroke: rgba(255,215,0,0.7);
+      stroke-dashoffset: -10;
     }
 
     /* ================================================================
@@ -354,6 +460,9 @@ title: Java Fundamentals Course ICEQ — World Map
         0 8px 30px rgba(0,0,0,0.4);
     }
     .level-card:hover::before { opacity: 1; }
+    .level-card:hover .level-icon {
+      transform: rotate(-6deg) scale(1.12);
+    }
 
     .card-header {
       display: flex;
@@ -373,6 +482,7 @@ title: Java Fundamentals Course ICEQ — World Map
       font-size: 1.6rem;
       line-height: 1;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+      transition: transform 0.25s;
     }
 
     .card-title {
@@ -526,10 +636,67 @@ title: Java Fundamentals Course ICEQ — World Map
       box-shadow: 0 0 20px rgba(192,132,208,0.2);
       transform: translateY(-3px);
     }
+    .star-card:hover .star-icon {
+      transform: scale(1.18) rotate(8deg);
+    }
     .star-card .star-icon {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       display: block;
+      transition: transform 0.25s;
+    }
+
+    /* Mejora: secciones nuevas resumen logros, ruta rápida y errores comunes con lenguaje de juego. */
+    .mini-section {
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .mini-section::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 5px;
+      background: repeating-linear-gradient(90deg, var(--coin-gold) 0 18px, var(--mario-red) 18px 36px, var(--pipe-green) 36px 54px);
+      opacity: 0.8;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+    }
+    .mini-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1rem 0.8rem;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .mini-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--coin-gold);
+      box-shadow: 0 0 18px rgba(255,215,0,0.16);
+    }
+    .mini-card h4 {
+      color: var(--coin-gold);
+      font-size: 0.45rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.5;
+    }
+    .mini-card p,
+    .mini-card li {
+      color: var(--text-muted);
+      font-size: 0.38rem;
+      line-height: 1.6;
+    }
+    .mini-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.35rem;
     }
     .star-card h4 {
       font-size: 0.45rem;
@@ -572,15 +739,40 @@ title: Java Fundamentals Course ICEQ — World Map
       color: #fff;
       text-decoration: none;
       font-size: clamp(0.38rem, 1.4vw, 0.5rem);
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
+      padding: 0.9rem 1.2rem 0.65rem;
+      border-radius: 10px 10px 6px 6px;
       margin: 0.3rem;
       border: 2px solid #1B5E20;
       transition: all 0.3s;
       font-family: inherit;
       letter-spacing: 1px;
       text-transform: uppercase;
-      box-shadow: 0 3px 12px rgba(76,175,80,0.15);
+      box-shadow: inset -6px 0 0 rgba(0,0,0,0.16), inset 6px 0 0 rgba(255,255,255,0.14), 0 3px 12px rgba(76,175,80,0.15);
+      position: relative;
+      overflow: visible;
+    }
+    .pipe-link::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -12px;
+      width: calc(100% + 26px);
+      height: 18px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #7de37f, var(--pipe-green));
+      border: 2px solid #1B5E20;
+      border-radius: 10px 10px 4px 4px;
+      box-shadow: inset -6px 0 0 rgba(0,0,0,0.14), inset 6px 0 0 rgba(255,255,255,0.18);
+    }
+    .pipe-link::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      width: 8px;
+      height: calc(100% - 18px);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.28);
     }
     .pipe-link:hover {
       background: linear-gradient(180deg, #66BB6A, var(--pipe-green));
@@ -713,6 +905,7 @@ title: Java Fundamentals Course ICEQ — World Map
       .level-grid { grid-template-columns: repeat(2, 1fr); }
       .map-connections { display: none; }
       .star-grid { grid-template-columns: 1fr; }
+      .mini-grid { grid-template-columns: 1fr; }
       .controls-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
@@ -725,192 +918,217 @@ title: Java Fundamentals Course ICEQ — World Map
       .resources-grid { grid-template-columns: 1fr; }
       .resources-section { padding: 0.8rem 1rem; }
       .controls-section { padding: 0.8rem 1rem; }
+      .question-block { display: none; }
+      .mini-section { padding: 1rem; }
+      [data-tooltip]::after { display: none; }
+    }
+
+    /* Mejora: prefers-reduced-motion desactiva parpadeos, flotación, scroll suave y reveals animados. */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+      .level-card:hover,
+      .star-card:hover,
+      .mini-card:hover,
+      .pipe-link:hover,
+      .btn-start:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
 <div class="wrapper">
 
   <!-- ================================================================
        TITLE SCREEN
   ================================================================ -->
-  <header class="title-screen">
+  <!-- Mejora: landmarks y nombres accesibles hacen navegable la landing con lector de pantalla. -->
+  <header class="title-screen reveal" aria-labelledby="page-title">
     <div class="cloud cloud-1"></div>
     <div class="cloud cloud-2"></div>
     <div class="cloud cloud-3"></div>
+    <span class="question-block qb-left" aria-hidden="true">?</span>
+    <span class="question-block qb-right" aria-hidden="true">?</span>
     <img src="assets/banner.png" alt="Java Fundamentals Course ICEQ" class="banner-img">
-    <h1>★ JAVA FUNDAMENTALS ★</h1>
+    <h1 id="page-title">★ JAVA FUNDAMENTALS ★</h1>
     <p class="subtitle">Curso introductorio de Java para estudiantes de secundaria</p>
     <p class="start-prompt">▶ PRESIONA UN NIVEL PARA EMPEZAR ◀</p>
   </header>
 
+  <main id="main-content" tabindex="-1">
+
   <!-- ================================================================
        PROGRESS
   ================================================================ -->
-  <section class="progress-section">
-    <span class="progress-label">TU AVANCE</span>
+  <!-- Mejora: progreso con texto vivo y checkboxes únicos conserva claridad visual y accesible. -->
+  <section class="progress-section reveal" aria-labelledby="progress-title">
+    <span class="progress-label" id="progress-title">TU AVANCE</span>
     <div class="progress-bar-wrap">
-      <progress id="global-progress" value="0" max="6"></progress>
+      <progress id="global-progress" value="0" max="6" aria-describedby="progress-status"></progress>
+      <span id="progress-status" class="sr-only" aria-live="polite">0 de 6 niveles completados</span>
     </div>
     <div class="progress-checkboxes" id="level-checks">
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-1</span></label>
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-2</span></label>
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-3</span></label>
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-4</span></label>
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-5</span></label>
-      <label><input type="checkbox" onchange="updateProgress()"><span>1-6</span></label>
+      <label><input id="progress-1-1" type="checkbox" data-save aria-label="Marcar World 1-1 como completado"><span>1-1</span></label>
+      <label><input id="progress-1-2" type="checkbox" data-save aria-label="Marcar World 1-2 como completado"><span>1-2</span></label>
+      <label><input id="progress-1-3" type="checkbox" data-save aria-label="Marcar World 1-3 como completado"><span>1-3</span></label>
+      <label><input id="progress-1-4" type="checkbox" data-save aria-label="Marcar World 1-4 como completado"><span>1-4</span></label>
+      <label><input id="progress-1-5" type="checkbox" data-save aria-label="Marcar World 1-5 como completado"><span>1-5</span></label>
+      <label><input id="progress-1-6" type="checkbox" data-save aria-label="Marcar World 1-6 como completado"><span>1-6</span></label>
     </div>
   </section>
-
-  <script>
-    function updateProgress() {
-      var checks = document.querySelectorAll('#level-checks input[type="checkbox"]');
-      var checked = 0;
-      for (var i = 0; i < checks.length; i++) {
-        if (checks[i].checked) checked++;
-      }
-      document.getElementById('global-progress').value = checked;
-    }
-  </script>
 
   <!-- ================================================================
        WORLD MAP
   ================================================================ -->
-  <section class="world-map">
-    <h2 class="section-title">🌍 MAPA DEL MUNDO</h2>
+  <section class="world-map reveal" aria-labelledby="world-map-title">
+    <h2 class="section-title" id="world-map-title">🌍 MAPA DEL MUNDO</h2>
 
     <div class="map-container">
-      <div class="map-connections">
-        <div class="hline hline-1-2"></div>
-        <div class="hline hline-2-3"></div>
-        <div class="hline hline-4-5"></div>
-        <div class="hline hline-5-6"></div>
-        <div class="vline vline-1"></div>
-        <div class="vline vline-2"></div>
-        <div class="vline vline-3"></div>
+      <!-- Mejora: caminos SVG decorativos conectan los niveles sin interferir con lectores de pantalla. -->
+      <div class="map-connections" aria-hidden="true">
+        <svg viewBox="0 0 960 620" preserveAspectRatio="none">
+          <path class="map-path" d="M155 145 H480 H805 V475 H480 H155 V145"></path>
+          <circle class="map-dot" cx="155" cy="145" r="7"></circle>
+          <circle class="map-dot" cx="480" cy="145" r="7"></circle>
+          <circle class="map-dot" cx="805" cy="145" r="7"></circle>
+          <circle class="map-dot" cx="805" cy="475" r="7"></circle>
+          <circle class="map-dot" cx="480" cy="475" r="7"></circle>
+          <circle class="map-dot" cx="155" cy="475" r="7"></circle>
+        </svg>
       </div>
 
       <div class="level-grid">
 
         <!-- WORLD 1-1 -->
-        <article class="level-card">
+        <article class="level-card reveal" aria-labelledby="level-1-title">
           <div class="card-header">
             <span class="level-number">WORLD 1-1</span>
             <span class="level-icon">🌱</span>
           </div>
-          <h3 class="card-title">Primer programa en Java</h3>
+          <h3 class="card-title" id="level-1-title">Primer programa en Java</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Ejecutar el starter sin cambios</li>
-            <li><input type="checkbox"> Personalizar el mensaje en consola</li>
-            <li><input type="checkbox"> Provocar y corregir un error</li>
+            <li><input type="checkbox" aria-label="World 1-1 objetivo ejecutar starter sin cambios"> Ejecutar el starter sin cambios</li>
+            <li><input type="checkbox" aria-label="World 1-1 objetivo personalizar mensaje en consola"> Personalizar el mensaje en consola</li>
+            <li><input type="checkbox" aria-label="World 1-1 objetivo provocar y corregir un error"> Provocar y corregir un error</li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ System.out.println</span>
-            <span class="meta-tag xp-tag">🪙 100 XP</span>
-            <span class="meta-tag duration-tag">⏱ 7 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del nivel">⚡ System.out.println</span>
+            <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 100 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 7 min</span>
           </div>
-          <a href="docs/lessons/lesson-01-hello-world/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-01-hello-world/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-1">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-2 -->
-        <article class="level-card">
+        <article class="level-card reveal" aria-labelledby="level-2-title">
           <div class="card-header">
             <span class="level-number">WORLD 1-2</span>
             <span class="level-icon">📦</span>
           </div>
-          <h3 class="card-title">Variables y tipos de datos</h3>
+          <h3 class="card-title" id="level-2-title">Variables y tipos de datos</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Crear variables con tipos correctos</li>
-            <li><input type="checkbox"> Imprimir datos con etiquetas</li>
-            <li><input type="checkbox"> Modificar valores y re-ejecutar</li>
+            <li><input type="checkbox" aria-label="World 1-2 objetivo crear variables con tipos correctos"> Crear variables con tipos correctos</li>
+            <li><input type="checkbox" aria-label="World 1-2 objetivo imprimir datos con etiquetas"> Imprimir datos con etiquetas</li>
+            <li><input type="checkbox" aria-label="World 1-2 objetivo modificar valores y re-ejecutar"> Modificar valores y re-ejecutar</li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ String, int, double</span>
-            <span class="meta-tag xp-tag">🪙 150 XP</span>
-            <span class="meta-tag duration-tag">⏱ 9 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del nivel">⚡ String, int, double</span>
+            <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 150 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 9 min</span>
           </div>
-          <a href="docs/lessons/lesson-02-variables/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-02-variables/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-2">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-3 -->
-        <article class="level-card">
+        <article class="level-card reveal" aria-labelledby="level-3-title">
           <div class="card-header">
             <span class="level-number">WORLD 1-3</span>
             <span class="level-icon">🔄</span>
           </div>
-          <h3 class="card-title">Condiciones y bucles</h3>
+          <h3 class="card-title" id="level-3-title">Condiciones y bucles</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Escribir un <code>if</code> con dos caminos</li>
-            <li><input type="checkbox"> Usar <code>for</code> para repetir intentos</li>
-            <li><input type="checkbox"> Agregar <code>break</code> al acertar</li>
+            <li><input type="checkbox" aria-label="World 1-3 objetivo escribir un if con dos caminos"> Escribir un <code>if</code> con dos caminos</li>
+            <li><input type="checkbox" aria-label="World 1-3 objetivo usar for para repetir intentos"> Usar <code>for</code> para repetir intentos</li>
+            <li><input type="checkbox" aria-label="World 1-3 objetivo agregar break al acertar"> Agregar <code>break</code> al acertar</li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ if, for, break</span>
-            <span class="meta-tag xp-tag">🪙 200 XP</span>
-            <span class="meta-tag duration-tag">⏱ 10 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del nivel">⚡ if, for, break</span>
+            <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 200 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 10 min</span>
           </div>
-          <a href="docs/lessons/lesson-03-if-loops/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-03-if-loops/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-3">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-4 -->
-        <article class="level-card">
+        <article class="level-card reveal" aria-labelledby="level-4-title">
           <div class="card-header">
             <span class="level-number">WORLD 1-4</span>
             <span class="level-icon">🔧</span>
           </div>
-          <h3 class="card-title">Métodos y entrada por consola</h3>
+          <h3 class="card-title" id="level-4-title">Métodos y entrada por consola</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Crear un método con nombre claro</li>
-            <li><input type="checkbox"> Leer un número con <code>Scanner</code></li>
-            <li><input type="checkbox"> Separar responsabilidades del <code>main</code></li>
+            <li><input type="checkbox" aria-label="World 1-4 objetivo crear un método con nombre claro"> Crear un método con nombre claro</li>
+            <li><input type="checkbox" aria-label="World 1-4 objetivo leer un número con Scanner"> Leer un número con <code>Scanner</code></li>
+            <li><input type="checkbox" aria-label="World 1-4 objetivo separar responsabilidades del main"> Separar responsabilidades del <code>main</code></li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ Scanner, métodos</span>
-            <span class="meta-tag xp-tag">🪙 250 XP</span>
-            <span class="meta-tag duration-tag">⏱ 10 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del nivel">⚡ Scanner, métodos</span>
+            <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 250 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 10 min</span>
           </div>
-          <a href="docs/lessons/lesson-04-methods/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-04-methods/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-4">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-5 -->
-        <article class="level-card">
+        <article class="level-card reveal" aria-labelledby="level-5-title">
           <div class="card-header">
             <span class="level-number">WORLD 1-5</span>
             <span class="level-icon">🧩</span>
           </div>
-          <h3 class="card-title">Clases y objetos</h3>
+          <h3 class="card-title" id="level-5-title">Clases y objetos</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Definir una clase con campos privados</li>
-            <li><input type="checkbox"> Construir objetos con <code>new</code></li>
-            <li><input type="checkbox"> Llamar métodos del objeto</li>
+            <li><input type="checkbox" aria-label="World 1-5 objetivo definir una clase con campos privados"> Definir una clase con campos privados</li>
+            <li><input type="checkbox" aria-label="World 1-5 objetivo construir objetos con new"> Construir objetos con <code>new</code></li>
+            <li><input type="checkbox" aria-label="World 1-5 objetivo llamar métodos del objeto"> Llamar métodos del objeto</li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ class, new, this</span>
-            <span class="meta-tag xp-tag">🪙 300 XP</span>
-            <span class="meta-tag duration-tag">⏱ 12 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del nivel">⚡ class, new, this</span>
+            <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 300 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 12 min</span>
           </div>
-          <a href="docs/lessons/lesson-05-classes-objects/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-05-classes-objects/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-5">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-6 — FINAL BOSS -->
-        <article class="level-card boss-card">
+        <article class="level-card boss-card reveal" aria-labelledby="level-6-title">
           <div class="card-header">
             <span class="level-number">🏰 WORLD 1-6</span>
             <span class="level-icon">🏰</span>
           </div>
-          <h3 class="card-title">Encapsulación y proyecto final</h3>
+          <h3 class="card-title" id="level-6-title">Encapsulación y proyecto final</h3>
           <ul class="card-objectives">
-            <li><input type="checkbox"> Proteger datos con <code>private</code></li>
-            <li><input type="checkbox"> Completar la lógica del juego</li>
-            <li><input type="checkbox"> Ejecutar la aventura completa</li>
+            <li><input type="checkbox" aria-label="World 1-6 objetivo proteger datos con private"> Proteger datos con <code>private</code></li>
+            <li><input type="checkbox" aria-label="World 1-6 objetivo completar la lógica del juego"> Completar la lógica del juego</li>
+            <li><input type="checkbox" aria-label="World 1-6 objetivo ejecutar la aventura completa"> Ejecutar la aventura completa</li>
           </ul>
           <div class="card-meta">
-            <span class="meta-tag powerup">⚡ Encapsulación</span>
-            <span class="meta-tag xp-tag">🪙 500 XP</span>
-            <span class="meta-tag duration-tag">⏱ 12 min</span>
+            <span class="meta-tag powerup" data-tooltip="Power-up principal del jefe final">⚡ Encapsulación</span>
+            <span class="meta-tag xp-tag" data-tooltip="Recompensa mayor por integrar todo el curso">🪙 500 XP</span>
+            <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 12 min</span>
           </div>
-          <a href="docs/lessons/lesson-06-final-project/" class="btn-start">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-06-final-project/" class="btn-start" data-tooltip="Abrir proyecto final y cerrar el mundo">▶ EMPEZAR</a>
         </article>
 
       </div>
@@ -920,22 +1138,22 @@ title: Java Fundamentals Course ICEQ — World Map
   <!-- ================================================================
        STAR ROAD
   ================================================================ -->
-  <section class="star-road">
-    <h2 class="star-road-title">⭐ STAR ROAD — RETOS BONUS</h2>
+  <section class="star-road reveal" aria-labelledby="star-road-title">
+    <h2 class="star-road-title" id="star-road-title">⭐ STAR ROAD — RETOS BONUS</h2>
     <div class="star-grid">
-      <div class="star-card">
+      <div class="star-card" data-tooltip="Reto creativo para practicar salida por consola">
         <span class="star-icon">🎨</span>
         <h4>Dibujo con texto</h4>
         <p>Crea arte ASCII en la consola usando solo <code>println</code></p>
         <a href="docs/lessons/lesson-01-hello-world/part-02-practice.md" class="star-link">⭐ INTENTAR</a>
       </div>
-      <div class="star-card">
+      <div class="star-card" data-tooltip="Reto para dividir operaciones en métodos">
         <span class="star-icon">🧮</span>
         <h4>Calculadora completa</h4>
         <p>Suma, resta y multiplica usando métodos separados</p>
         <a href="docs/lessons/lesson-04-methods/part-02-practice.md" class="star-link">⭐ INTENTAR</a>
       </div>
-      <div class="star-card">
+      <div class="star-card" data-tooltip="Reto final para personalizar la aventura">
         <span class="star-icon">🎮</span>
         <h4>Tu propio juego</h4>
         <p>Modifica el proyecto final con tu propia temática</p>
@@ -944,20 +1162,87 @@ title: Java Fundamentals Course ICEQ — World Map
     </div>
   </section>
 
+  <!-- Mejora: logros tipo estrellas convierten avances técnicos en metas visibles. -->
+  <section class="mini-section reveal" aria-labelledby="achievements-title">
+    <h2 class="section-title" id="achievements-title">⭐ LOGROS</h2>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h4>⭐ Primer Run</h4>
+        <p>Ejecuta un starter sin cambiar nada y explica qué apareció en consola.</p>
+      </article>
+      <article class="mini-card">
+        <h4>⭐⭐ Debug Hunter</h4>
+        <p>Provoca un error pequeño, lee el mensaje y corrígelo sin borrar todo.</p>
+      </article>
+      <article class="mini-card">
+        <h4>⭐⭐⭐ Java Hero</h4>
+        <p>Completa la aventura final y explica qué responsabilidad tiene cada clase.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Mejora: speedrun route ofrece una ruta de 30 minutos para sesiones cortas. -->
+  <section class="mini-section reveal" aria-labelledby="speedrun-title">
+    <h2 class="section-title" id="speedrun-title">⏱ SPEEDRUN ROUTE — 30 MIN</h2>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h4>0-10 min</h4>
+        <ul>
+          <li>▶ World 1-1: cambia un mensaje.</li>
+          <li>▶ World 1-2: imprime una ficha.</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <h4>10-20 min</h4>
+        <ul>
+          <li>▶ World 1-3: prueba un intento.</li>
+          <li>▶ World 1-4: crea una suma.</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <h4>20-30 min</h4>
+        <ul>
+          <li>▶ World 1-5: crea un jugador.</li>
+          <li>▶ World 1-6: ejecuta el juego final.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Mejora: Goombas enumera errores comunes con solución breve antes de que frenen la práctica. -->
+  <section class="mini-section reveal" aria-labelledby="goombas-title">
+    <h2 class="section-title" id="goombas-title">🍄 GOOMBAS — ERRORES COMUNES</h2>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h4>Falta `;`</h4>
+        <p>Revisa la línea marcada y la anterior. Java suele señalar dónde se rompió la instrucción.</p>
+      </article>
+      <article class="mini-card">
+        <h4>Llave perdida</h4>
+        <p>Cuenta `{` y `}` por clase, método, `if` o `for` antes de mover código.</p>
+      </article>
+      <article class="mini-card">
+        <h4>Nombre distinto</h4>
+        <p>`Main`, `main`, variables y métodos distinguen mayúsculas y minúsculas.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ================================================================
        WARP ZONE
   ================================================================ -->
-  <section class="warp-zone">
-    <a href="docs/quick-start-student.md" class="pipe-link">🟢 TUBERÍA — MODO RÁPIDO</a>
-    <a href="docs/student-mission-map.md" class="pipe-link">🟢 TUBERÍA — MAPA DE MISIÓN</a>
-    <a href="docs/replit-lab-guide.md" class="pipe-link">🟢 TUBERÍA — GUÍA REPLIT</a>
-  </section>
+  <!-- Mejora: la Warp Zone funciona como navegación de atajos con tuberías CSS. -->
+  <nav class="warp-zone reveal" aria-label="Warp Zone: atajos del curso">
+    <a href="docs/quick-start-student.md" class="pipe-link" data-tooltip="Ruta mínima para practicar sin leer todo">🟢 TUBERÍA — MODO RÁPIDO</a>
+    <a href="docs/student-mission-map.md" class="pipe-link" data-tooltip="Mapa con niveles, puntos e insignias">🟢 TUBERÍA — MAPA DE MISIÓN</a>
+    <a href="docs/replit-lab-guide.md" class="pipe-link" data-tooltip="Preparación de Replit antes de programar">🟢 TUBERÍA — GUÍA REPLIT</a>
+  </nav>
 
   <!-- ================================================================
        CONTROLS LEGEND
   ================================================================ -->
-  <section class="controls-section">
-    <h3>🔧 CONTROLES</h3>
+  <section class="controls-section reveal" aria-labelledby="controls-title">
+    <h3 id="controls-title">🔧 CONTROLES</h3>
     <div class="controls-grid">
       <div class="control-item"><span class="icon">🌱</span> Nivel principiante</div>
       <div class="control-item"><span class="icon">⚡</span> Power-up del nivel</div>
@@ -973,8 +1258,8 @@ title: Java Fundamentals Course ICEQ — World Map
   <!-- ================================================================
        RESOURCES
   ================================================================ -->
-  <section class="resources-section">
-    <h3>📂 RECURSOS DEL CURSO</h3>
+  <section class="resources-section reveal" aria-labelledby="resources-title">
+    <h3 id="resources-title">📂 RECURSOS DEL CURSO</h3>
     <div class="resources-grid">
       <a href="course-plan.md" class="resource-link"><span class="icon">📋</span> Plan del curso</a>
       <a href="starter-files/" class="resource-link"><span class="icon">💻</span> Código inicial</a>
@@ -987,10 +1272,12 @@ title: Java Fundamentals Course ICEQ — World Map
     </div>
   </section>
 
+  </main>
+
   <!-- ================================================================
        CREDITS
   ================================================================ -->
-  <footer class="credits">
+  <footer class="credits reveal">
     <p class="credit-title">★ JAVA FUNDAMENTALS COURSE ICEQ ★</p>
     <p>UPC — Responsabilidad Social Pre 2026</p>
     <p>Código: 1ASI0729</p>
@@ -1000,5 +1287,35 @@ title: Java Fundamentals Course ICEQ — World Map
   </footer>
 
 </div>
+<!-- Mejora: persistencia local del progreso sin depender de servidor y con fallback seguro. -->
+<script>
+  (function () {
+    var boxes = document.querySelectorAll('#level-checks input[data-save]');
+    var bar = document.getElementById('global-progress');
+    var status = document.getElementById('progress-status');
+    function sync() {
+      var done = 0;
+      boxes.forEach(function (box, i) { if (box.checked) done++; try { localStorage.setItem('java-map-' + i, box.checked ? '1' : '0'); } catch (e) {} });
+      bar.value = done;
+      status.textContent = done + ' de ' + boxes.length + ' niveles completados';
+    }
+    boxes.forEach(function (box, i) { try { box.checked = localStorage.getItem('java-map-' + i) === '1'; } catch (e) {} box.addEventListener('change', sync); });
+    sync();
+  })();
+</script>
+<!-- Mejora: IntersectionObserver activa fade-in-up al scroll y degrada limpio si no existe. -->
+<script>
+  (function () {
+    document.documentElement.classList.remove('no-js');
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { items.forEach(function (item) { item.classList.add('is-visible'); }); return; }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (item) { observer.observe(item); });
+  })();
+</script>
 </body>
 </html>
