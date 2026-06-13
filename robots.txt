@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://java-fundamentals-course-iceq.vercel.app/sitemap.xml

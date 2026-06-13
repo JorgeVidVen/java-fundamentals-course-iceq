@@ -6,7 +6,7 @@
    ================================================================ */
 
 /* ---- FONTS ---- */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
   --mario-red: #E52521;
@@ -43,6 +43,25 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+body.light-mode {
+  --bg-dark: #8fd3ff;
+  --card-bg: #fff7d6;
+  --card-border: #b36a1b;
+  --text-light: #1a1a2e;
+  --text-muted: #3b4268;
+  --focus-ring: #1a1a2e;
+  --glow-red: rgba(229,37,33,0.16);
+  --glow-gold: rgba(255,215,0,0.35);
+  --glow-green: rgba(46,125,50,0.22);
+}
+
+body.light-mode::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.65) 0 24px, transparent 25px),
+    radial-gradient(circle at 72% 28%, rgba(255,255,255,0.55) 0 18px, transparent 19px),
+    radial-gradient(circle at 36% 78%, rgba(255,255,255,0.5) 0 14px, transparent 15px);
 }
 
 /* ---- ESTRELLAS DE FONDO ---- */
@@ -200,6 +219,27 @@ code {
   margin-bottom: 2rem;
   background: linear-gradient(180deg, rgba(229,37,33,0.06) 0%, transparent 100%);
   border-radius: 4px 4px 0 0;
+}
+
+.landing-theme-toggle {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 4;
+  width: 42px;
+  height: 42px;
+  border: 3px solid var(--coin-gold);
+  background: var(--card-bg);
+  color: var(--text-light);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--card-border);
+  font-size: 1.1rem;
+}
+
+.landing-theme-toggle:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--card-border);
 }
 
 .title-screen .banner-img {
@@ -913,7 +953,8 @@ progress::-moz-progress-bar {
   .star-card:hover,
   .mini-card:hover,
   .pipe-link:hover,
-  .btn-start:hover {
+  .btn-start:hover,
+  .landing-theme-toggle:hover {
     transform: none;
   }
 }

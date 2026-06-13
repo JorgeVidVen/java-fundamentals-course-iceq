@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 02: Variables y tipos de datos - Quiz"
+description: Review questions about types, values and concatenation.
 ---
 
 <p align="center">
@@ -602,7 +604,7 @@ Sin `grade`, no hay decisión. Por eso esta lección es la base de la siguiente.
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 

@@ -11,7 +11,7 @@ Lista de revisión interna para el equipo ICEQ antes de consolidar el PDF final 
 
 ## C02. Precisión técnica
 
-- [ ] Los archivos base compilan o documentan con claridad el trabajo pendiente del estudiante.
+- [ ] Los archivos base compilan o documentan con claridad el trabajo por completar del estudiante.
 - [ ] Los ejemplos completos compilan por lección.
 - [ ] Las explicaciones sobre variables, condiciones, bucles, métodos y clases son técnicamente correctas.
 - [ ] El curso evita temas avanzados fuera del alcance del enunciado.
@@ -31,13 +31,13 @@ Lista de revisión interna para el equipo ICEQ antes de consolidar el PDF final 
 - [ ] El código se lee bien en pantalla.
 - [ ] El navegador y la consola son visibles.
 - [ ] Los videos son breves y enfocados.
-- [ ] Los enlaces se mantienen como `Pendiente` hasta su publicación.
+- [ ] Los enlaces se marcan como publicados, respaldo o por publicar segun su estado real.
 
 ## C05. Documento de outline del curso
 
 - [ ] `course-plan.md` incluye el resumen del curso.
 - [ ] Incluye la secuencia de lecciones.
-- [ ] Incluye enlaces de video pendientes o finales.
-- [ ] Incluye enlaces de prácticas online pendientes o finales.
+- [ ] Incluye enlaces de video publicados o por publicar.
+- [ ] Incluye enlaces de practicas online publicadas o de respaldo.
 - [ ] Incluye el enlace al repositorio público.
 - [ ] Incluye un resumen conciso de la elaboración del equipo.

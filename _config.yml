@@ -1,6 +1,6 @@
 title: Java Fundamentals Course ICEQ
 description: Curso introductorio de Java para estudiantes de secundaria
-url: ""
+url: "https://java-fundamentals-course-iceq.vercel.app"
 baseurl: ""
 theme: null
 markdown: kramdown
@@ -9,6 +9,7 @@ permalink: pretty
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 defaults:
   - scope:
@@ -24,8 +25,6 @@ defaults:
 
 exclude:
   - README.md
-  - CONTRIBUTING.md
-  - course-plan.md
   - scripts/
   - starter-files/
   - completed-examples/

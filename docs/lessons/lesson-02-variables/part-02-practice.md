@@ -1,5 +1,8 @@
 ---
 layout: lesson
+title: "Leccion 02: Variables y tipos de datos - Practica"
+description: Lab to create a student profile with Java variables.
+has_compiler: true
 ---
 
 <p align="center">
@@ -20,8 +23,8 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
-> **Archivo base:** `starter-files/lesson-02-variables/Main.java`.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
+> **Archivo base:** `starter-files/lesson-02-variables/Main.java`.
 > **Solución de referencia:** `completed-examples/lesson-02-variables/`.
 
 ---
@@ -90,10 +93,10 @@ Deberías ver algo parecido a esto:
 public class Main {
     public static void main(String[] args) {
         // Escribe tus variables aquí
-        
-        
+
+
         // Imprime tus variables
-        
+
     }
 }
 ```
@@ -601,7 +604,7 @@ En la Lección 03, esos datos servirán para tomar decisiones.
 
 <div align="center">
 
-**Siguiente:** [Quiz de comprensión](part-03-quiz.md)
+**Siguiente:** [Quiz de comprensión](part-03-quiz/)
 
 </div>
 

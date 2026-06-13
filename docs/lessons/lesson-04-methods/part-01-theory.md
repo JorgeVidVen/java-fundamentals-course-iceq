@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 04: Metodos y entrada por consola - Teoria"
+description: Methods, parameters, return values and Scanner input.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -738,7 +740,7 @@ Estas referencias son apoyo. La práctica principal debe realizarse en Replit co
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

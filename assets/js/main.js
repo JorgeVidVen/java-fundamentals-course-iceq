@@ -1,45 +1,54 @@
 (function() {
   'use strict';
 
-  // === DARK MODE ===
-  const darkToggle = document.getElementById('darkModeToggle');
-  const savedDark = localStorage.getItem('iceq-dark-mode');
-  if (savedDark === 'true') {
-    document.body.classList.add('dark-mode');
-    if (darkToggle) darkToggle.textContent = '☀️';
+  function safeGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return null; }
   }
+
+  function safeSet(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  const darkToggle = document.getElementById('darkModeToggle');
+
+  function applyDarkMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    if (!darkToggle) return;
+    darkToggle.textContent = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    darkToggle.setAttribute('aria-pressed', String(isDark));
+    darkToggle.setAttribute('aria-label', isDark ? 'Desactivar modo oscuro' : 'Activar modo oscuro');
+  }
+
+  applyDarkMode(safeGet('iceq-dark-mode') === 'true');
+
   if (darkToggle) {
     darkToggle.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      localStorage.setItem('iceq-dark-mode', isDark);
-      this.textContent = isDark ? '☀️' : '🌙';
+      const isDark = !document.body.classList.contains('dark-mode');
+      safeSet('iceq-dark-mode', String(isDark));
+      applyDarkMode(isDark);
     });
   }
 
-  // === NAV TOGGLE ===
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
     });
   }
 
-  // === GLOBAL PROGRESS BAR ===
   function updateGlobalProgress() {
     const total = 6;
     let completed = 0;
     for (let i = 1; i <= total; i++) {
-      if (localStorage.getItem('iceq-lesson-' + i) === 'complete') {
-        completed++;
-      }
+      if (safeGet('iceq-lesson-' + i) === 'complete') completed++;
     }
     const bar = document.getElementById('progressFill');
-    if (bar) {
-      bar.style.width = (completed / total * 100) + '%';
-    }
+    if (bar) bar.style.width = (completed / total * 100) + '%';
   }
-  updateGlobalProgress();
 
+  updateGlobalProgress();
+  window.addEventListener('iceq-progress-update', updateGlobalProgress);
 })();

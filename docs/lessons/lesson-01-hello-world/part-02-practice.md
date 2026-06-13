@@ -1,5 +1,8 @@
 ---
 layout: lesson
+title: "Leccion 01: Primer programa en Java - Practica"
+description: Guided lab to run, modify and fix the first Java program.
+has_compiler: true
 ---
 
 <p align="center">
@@ -20,8 +23,8 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
-> **Archivo base:** `starter-files/lesson-01-hello-world/Main.java`.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
+> **Archivo base:** `starter-files/lesson-01-hello-world/Main.java`.
 > **Solución de referencia:** `completed-examples/lesson-01-hello-world/`.
 
 ---
@@ -652,7 +655,7 @@ Ese cambio parece pequeño, pero abre la puerta a programas más flexibles.
 
 <div align="center">
 
-**Siguiente:** [Quiz de comprensión](part-03-quiz.md)
+**Siguiente:** [Quiz de comprensión](part-03-quiz/)
 
 </div>
 

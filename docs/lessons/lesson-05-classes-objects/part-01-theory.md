@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 05: Clases y objetos - Teoria"
+description: Classes, objects, fields, constructors and methods in Java.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** JDoodle.
 
 ---
@@ -576,7 +578,7 @@ El siguiente diagrama muestra cómo varias clases pueden colaborar en un program
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

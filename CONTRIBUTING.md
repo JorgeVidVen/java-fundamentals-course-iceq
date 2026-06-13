@@ -1,3 +1,10 @@
+---
+layout: default
+title: Contributing
+description: Contribution guide for Java Fundamentals Course ICEQ.
+permalink: /contributing/
+---
+
 # Contributing
 
 Este repositorio contiene el curso **Java Fundamentals Course ICEQ** para la asignación de Responsabilidad Social UPC Pre 2026. Toda contribución debe mantener el material claro para estudiantes de secundaria, ejecutable en Replit y consistente con la entrega final en Markdown/PDF.
@@ -18,7 +25,7 @@ Las responsabilidades pueden moverse según disponibilidad del equipo, pero el c
 
 | Ruta | Propósito |
 |---|---|
-| `course-plan.md` | Plan general del curso, ruta de aprendizaje, enlaces pendientes y evidencias. |
+| `course-plan.md` | Plan general del curso, ruta de aprendizaje, enlaces publicados, respaldos y evidencias. |
 | `docs/lessons/` | Material principal para estudiantes: teoría, práctica y quiz por lección. |
 | `docs/` | Guías de entorno, enlaces de editores, glosario y referencias de apoyo. |
 | `starter-files/` | Código Java inicial con comentarios y espacios de trabajo para el estudiante. |

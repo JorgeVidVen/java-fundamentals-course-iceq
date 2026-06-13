@@ -92,9 +92,9 @@ El video debe explicar **String, int, double, boolean y concatenación** usando 
 | Se menciona el archivo starter y la solución completa. | |
 | La narración evita frases exageradas y mantiene tono técnico accesible. | |
 
-## Enlace pendiente
+## Enlace de publicacion
 
 | Recurso | URL |
 |---|---|
-| Video YouTube no listado | Pendiente |
-| Editor online precargado | Pendiente |
+| Video YouTube no listado | Por publicar por el equipo |
+| Editor online precargado | Crear con Replit y `starter-files` |

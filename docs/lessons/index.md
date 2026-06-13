@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Lecciones - Java Fundamentals Course ICEQ
+description: Lesson index with theory, practice and quiz for each Java course level.
 ---
 
 # Lecciones

@@ -85,10 +85,10 @@ scripts/
 
 El curso usa español técnico claro. Se priorizan términos como biblioteca, requisito, aplicación, desplegar, probar y hacer commit, de acuerdo con el enunciado UPC.
 
-## Estado pendiente
+## Estado de publicacion
 
-- Enlace del repositorio GitHub público: https://github.com/ICEQ2026/java-fundamentals-course-iceq
+- Enlace del repositorio GitHub público: https://github.com/JorgeVidVen/java-fundamentals-course-iceq
 - Enlaces Replit por lección.
-- Enlaces YouTube no listados.
+- Guiones de video: `scripts/lesson-XX-script.md`; los enlaces YouTube se agregan cuando el equipo publique las grabaciones.
 - Reporte de participación del equipo.
 

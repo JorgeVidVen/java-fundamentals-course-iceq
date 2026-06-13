@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Mapa de mision del estudiante"
+description: Level map with objectives and badges for the Java course.
+---
+
 # Mapa de misión del estudiante
 
 Este mapa convierte el curso en una ruta de seis niveles. La meta no es leer todo de una vez, sino completar pequeñas victorias ejecutables en Java.

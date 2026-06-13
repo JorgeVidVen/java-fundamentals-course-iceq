@@ -1,5 +1,8 @@
 ---
 layout: lesson
+title: "Leccion 05: Clases y objetos - Practica"
+description: Lab to model a player with state and behavior.
+has_compiler: true
 ---
 
 <p align="center">
@@ -20,7 +23,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** JDoodle.
 
 ---
@@ -505,7 +508,7 @@ Si otra persona abre tu Repl, ¿podría entender qué cambiaste y por qué? Ajus
 
 <div align="center">
 
-**Siguiente:** [Quiz de comprensión](part-03-quiz.md)
+**Siguiente:** [Quiz de comprensión](part-03-quiz/)
 
 </div>
 

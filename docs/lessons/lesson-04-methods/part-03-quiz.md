@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 04: Metodos y entrada por consola - Quiz"
+description: Review questions about methods, Scanner and responsibilities.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -452,7 +454,7 @@ Puedes continuar si respondes:
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 

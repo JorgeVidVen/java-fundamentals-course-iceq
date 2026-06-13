@@ -1,3 +1,10 @@
+---
+layout: default
+title: Course plan
+description: Complete route for Java Fundamentals Course ICEQ.
+permalink: /course-plan/
+---
+
 <p align="center">
   <img src="assets/banner.png" alt="Java Fundamentals Course ICEQ" width="100%">
 </p>
@@ -47,21 +54,21 @@ La ruta empieza con programas mínimos y avanza hacia una aplicación de consola
 
 El material completo queda disponible para revisión, pero la experiencia recomendada para estudiantes empieza por una ruta más directa:
 
-1. Abrir [`docs/quick-start-student.md`](docs/quick-start-student.md).
+1. Abrir [Modo rapido para estudiantes](/docs/quick-start-student/).
 2. Completar una victoria visible por lección.
-3. Registrar avance en [`docs/student-mission-map.md`](docs/student-mission-map.md).
+3. Registrar avance en [Mapa de mision](/docs/student-mission-map/).
 4. Volver a la teoría y quiz solo cuando el laboratorio ya haya sido ejecutado.
 
 ## Secuencia de lecciones
 
-| Lección | Duración | Video del curso | Laboratorio Replit | Contenido | Producto |
+| Leccion | Duracion | Video del curso | Laboratorio online | Contenido | Producto |
 |---|---:|---|---|---|---|
-| 01. Primer programa en Java | 7 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-01-hello-world/part-01-theory.md) | Mensaje en consola |
-| 02. Variables y tipos de datos | 9 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-02-variables/part-01-theory.md) | Ficha de estudiante |
-| 03. Condiciones y bucles | 10 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-03-if-loops/part-01-theory.md) | Reglas y repeticiones |
-| 04. Métodos y entrada por consola | 10 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-04-methods/part-01-theory.md) | Calculadora mínima |
-| 05. Clases y objetos | 12 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-05-classes-objects/part-01-theory.md) | Modelo de jugador |
-| 06. Encapsulación y proyecto final | 12 min | Pendiente | Pendiente | [Contenido](docs/lessons/lesson-06-final-project/part-01-theory.md) | Aventura del Número Secreto |
+| 01. Primer programa en Java | 7 min | [Guion 01](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-01-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-01-hello-world/part-01-theory/) | Mensaje en consola |
+| 02. Variables y tipos de datos | 9 min | [Guion 02](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-02-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-02-variables/part-01-theory/) | Ficha de estudiante |
+| 03. Condiciones y bucles | 10 min | [Guion 03](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-03-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-03-if-loops/part-01-theory/) | Reglas y repeticiones |
+| 04. Metodos y entrada por consola | 10 min | [Guion 04](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-04-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-04-methods/part-01-theory/) | Calculadora minima |
+| 05. Clases y objetos | 12 min | [Guion 05](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-05-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-05-classes-objects/part-01-theory/) | Modelo de jugador |
+| 06. Encapsulacion y proyecto final | 12 min | [Guion 06](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/blob/main/scripts/lesson-06-script.md) | [Crear laboratorio](/docs/online-editor-links/) | [Contenido](/docs/lessons/lesson-06-final-project/part-01-theory/) | Aventura del Numero Secreto |
 
 ## Ruta de aprendizaje
 
@@ -91,15 +98,15 @@ La encapsulación protege reglas internas. El proyecto final integra entrada, m�
 
 ## Enlaces del repositorio
 
-- Repositorio GitHub público: https://github.com/ICEQ2026/java-fundamentals-course-iceq
+- Repositorio GitHub público: https://github.com/JorgeVidVen/java-fundamentals-course-iceq
 - Contenido del estudiante: `docs/lessons/`.
-- Modo rápido para estudiantes: `docs/quick-start-student.md`.
-- Mapa de misión del estudiante: `docs/student-mission-map.md`.
-- Preparación del entorno Replit: `docs/replit-lab-guide.md`.
-- Código inicial Java: `starter-files/`.
-- Soluciones completas Java: `completed-examples/`.
-- Guiones de video del equipo: `scripts/`.
-- Guía de laboratorios Replit: `docs/replit-lab-guide.md`.
+- Modo rápido para estudiantes: [/docs/quick-start-student/](/docs/quick-start-student/).
+- Mapa de misión del estudiante: [/docs/student-mission-map/](/docs/student-mission-map/).
+- Preparación del entorno Replit: [/docs/replit-lab-guide/](/docs/replit-lab-guide/).
+- Código inicial Java: [starter-files](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files).
+- Soluciones completas Java: [completed-examples](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/completed-examples).
+- Guiones de video del equipo: [scripts](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/scripts).
+- Guía de laboratorios Replit: [/docs/replit-lab-guide/](/docs/replit-lab-guide/).
 
 ## Elaboración en equipo
 
@@ -118,7 +125,7 @@ La encapsulación protege reglas internas. El proyecto final integra entrada, m�
 | Precisión técnica | Sintaxis validada con referencias de Java y compilación de ejemplos. |
 | Audiencia objetivo | Lenguaje accesible, analogías concretas, prácticas cortas y Replit. |
 | Calidad de video | Guiones con escena, demostración, error controlado y cierre técnico. |
-| Documento del curso | Plan navegable con enlaces, ruta, repositorio y evidencias pendientes. |
+| Documento del curso | Plan navegable con enlaces, ruta, repositorio y evidencias de publicacion claras. |
 
 ## Referencias técnicas
 

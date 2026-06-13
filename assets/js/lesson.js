@@ -1,12 +1,29 @@
 (function() {
   'use strict';
 
+  const memoryStore = {};
+
+  function safeGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return memoryStore[key] || null; }
+  }
+
+  function safeSet(key, value) {
+    memoryStore[key] = value;
+    try { window.localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  function slugify(text) {
+    return text.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 60) || 'section';
+  }
+
   // === LESSON META ===
   const pathParts = window.location.pathname.split('/').filter(Boolean);
   let lessonNum = 0;
   let lessonType = 'theory';
-  const lessonNames = ['', 'hello-world', 'variables', 'if-loops', 'methods', 'classes-objects', 'final-project'];
-  const lessonTitles = ['', 'Primer programa', 'Variables y tipos', 'Condiciones y bucles', 'Métodos y Scanner', 'Clases y objetos', 'Proyecto final'];
   const lessonXP = ['', 100, 150, 200, 250, 300, 500];
 
   pathParts.forEach((part, i) => {
@@ -36,7 +53,7 @@
     const headings = document.querySelectorAll('.lesson-content h2, .lesson-content h3');
     headings.forEach(h => {
       if (!h.id) {
-        h.id = 'toc-' + Math.random().toString(36).slice(2, 8);
+        h.id = slugify(h.textContent) + '-' + Array.prototype.indexOf.call(headings, h);
       }
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -49,6 +66,7 @@
       li.appendChild(a);
       tocList.appendChild(li);
 
+      if (!('IntersectionObserver' in window)) return;
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -67,7 +85,7 @@
     const key = 'iceq-lesson-' + lessonNum;
 
     function updateButton() {
-      const done = localStorage.getItem(key) === 'complete';
+      const done = safeGet(key) === 'complete';
       markBtn.textContent = done ? '\u2713 Completada' : '\u2713 Marcar como completada';
       markBtn.disabled = done;
       if (done) markBtn.style.opacity = '.6';
@@ -78,19 +96,22 @@
       const total = 6;
       let completed = 0;
       for (let i = 1; i <= total; i++) {
-        if (localStorage.getItem('iceq-lesson-' + i) === 'complete') completed++;
+        if (safeGet('iceq-lesson-' + i) === 'complete') completed++;
       }
       const fill = document.getElementById('miniProgressFill');
       const pct = document.getElementById('progressPercent');
       if (fill) fill.style.width = (completed / total * 100) + '%';
-      if (pct) pct.textContent = Math.round(completed / total * 100) + '%';
+      const percent = Math.round(completed / total * 100);
+      if (pct) pct.textContent = percent + '%';
+      const progressBar = document.getElementById('miniProgressBar');
+      if (progressBar) progressBar.setAttribute('aria-valuenow', String(percent));
       const globalFill = document.getElementById('progressFill');
       if (globalFill) globalFill.style.width = (completed / total * 100) + '%';
     }
 
     updateButton();
     markBtn.addEventListener('click', function() {
-      localStorage.setItem(key, 'complete');
+      safeSet(key, 'complete');
       updateButton();
       window.dispatchEvent(new CustomEvent('iceq-progress-update'));
     });

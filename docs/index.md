@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Java Fundamentals Course ICEQ
+description: Documentation portal for Java Fundamentals Course ICEQ.
 ---
 
 <p align="center">
@@ -15,11 +16,11 @@ Curso introductorio de Java para estudiantes de secundaria. La ruta está pensad
 
 | Quiero... | Abrir |
 |---|---|
-| Practicar rápido sin leer todo primero | [Modo rápido para estudiantes](quick-start-student.md) |
-| Seguir el curso como una misión por niveles | [Mapa de misión](student-mission-map.md) |
-| Preparar Replit antes de programar | [Guía de entorno Replit](replit-lab-guide.md) |
+| Practicar rápido sin leer todo primero | [Modo rápido para estudiantes](/docs/quick-start-student/) |
+| Seguir el curso como una misión por niveles | [Mapa de misión](/docs/student-mission-map/) |
+| Preparar Replit antes de programar | [Guía de entorno Replit](/docs/replit-lab-guide/) |
 | Ver todas las lecciones | [Índice de lecciones](lessons/) |
-| Revisar enlaces de editores online | [Laboratorios online](online-editor-links.md) |
+| Revisar enlaces de editores online | [Laboratorios online](/docs/online-editor-links/) |
 
 ## Ruta de aprendizaje
 
@@ -36,10 +37,10 @@ Curso introductorio de Java para estudiantes de secundaria. La ruta está pensad
 
 | Carpeta | Uso |
 |---|---|
-| [`starter-files`](../starter-files/) | Código inicial para resolver en Replit. |
-| [`completed-examples`](../completed-examples/) | Soluciones completas para comparar después del intento. |
+| [`starter-files`](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files) | Código inicial para resolver en Replit. |
+| [`completed-examples`](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/completed-examples) | Soluciones completas para comparar después del intento. |
 | [`lessons`](lessons/) | Teoría, práctica y quiz por cada lección. |
-| [`scripts`](../scripts/) | Guiones de video y revisión del equipo. |
+| [`scripts`](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/scripts) | Guiones de video y revisión del equipo. |
 
 ## Dinámica recomendada
 
@@ -60,4 +61,4 @@ En la última lección se integra todo en **Aventura del Número Secreto**:
 - clases separadas por responsabilidad;
 - encapsulación para proteger el estado del jugador.
 
-Abre la práctica final aquí: [Lección 06: Proyecto final](lessons/lesson-06-final-project/part-02-practice.md).
+Abre la práctica final aquí: [Lección 06: Proyecto final](/docs/lessons/lesson-06-final-project/part-02-practice/).

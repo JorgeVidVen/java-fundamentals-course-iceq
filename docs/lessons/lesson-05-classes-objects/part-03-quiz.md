@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 05: Clases y objetos - Quiz"
+description: Review questions about objects, constructors and method calls.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** JDoodle.
 
 ---
@@ -358,7 +360,7 @@ Puedes continuar si respondes:
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 

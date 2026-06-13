@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 01: Primer programa en Java - Quiz"
+description: Review questions about main, println and basic Java errors.
 ---
 
 <p align="center">
@@ -723,7 +725,7 @@ La diferencia es que el programa empieza a recordar información. Esa es la func
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 

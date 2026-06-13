@@ -16,12 +16,12 @@ title: Java Fundamentals Course ICEQ — World Map
   <meta property="og:type" content="website">
   <meta property="og:title" content="Java Fundamentals Course ICEQ — World Map">
   <meta property="og:description" content="Curso introductorio de Java para secundaria con 6 niveles, retos bonus y proyecto final estilo mapa retro.">
-  <meta property="og:url" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/">
-  <meta property="og:image" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/assets/banner.png">
+  <meta property="og:url" content="https://java-fundamentals-course-iceq.vercel.app/">
+  <meta property="og:image" content="https://java-fundamentals-course-iceq.vercel.app/assets/banner.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Java Fundamentals Course ICEQ — World Map">
   <meta name="twitter:description" content="Aprende Java en 6 niveles retro con Replit, retos bonus y una aventura final.">
-  <meta name="twitter:image" content="https://jorgevidven.github.io/java-fundamentals-course-iceq/assets/banner.png">
+  <meta name="twitter:image" content="https://java-fundamentals-course-iceq.vercel.app/assets/banner.png">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,7 +29,7 @@ title: Java Fundamentals Course ICEQ — World Map
       "name": "Java Fundamentals Course ICEQ",
       "description": "Curso introductorio de Java para estudiantes de secundaria con ruta de 6 niveles, práctica en Replit y proyecto final de consola.",
       "inLanguage": "es",
-      "url": "https://jorgevidven.github.io/java-fundamentals-course-iceq/",
+      "url": "https://java-fundamentals-course-iceq.vercel.app/",
       "provider": {
         "@type": "Organization",
         "name": "ICEQ",
@@ -51,6 +51,7 @@ title: Java Fundamentals Course ICEQ — World Map
   ================================================================ -->
   <!-- Mejora: landmarks y nombres accesibles hacen navegable la landing con lector de pantalla. -->
   <header class="title-screen reveal" aria-labelledby="page-title">
+    <button class="landing-theme-toggle" id="landingThemeToggle" type="button" aria-label="Cambiar a modo dia" aria-pressed="true">DAY</button>
     <div class="cloud cloud-1"></div>
     <div class="cloud cloud-2"></div>
     <div class="cloud cloud-3"></div>
@@ -357,13 +358,13 @@ title: Java Fundamentals Course ICEQ — World Map
     <h3 id="resources-title">📂 RECURSOS DEL CURSO</h3>
     <div class="resources-grid">
       <a href="/course-plan/" class="resource-link"><span class="icon">📋</span> Plan del curso</a>
-      <a href="starter-files/" class="resource-link"><span class="icon">💻</span> Código inicial</a>
-      <a href="completed-examples/" class="resource-link"><span class="icon">✅</span> Soluciones completas</a>
-      <a href="docs/lessons/" class="resource-link"><span class="icon">📖</span> Índice de lecciones</a>
+      <a href="https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files" class="resource-link"><span class="icon">💻</span> Código inicial</a>
+      <a href="https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/completed-examples" class="resource-link"><span class="icon">✅</span> Soluciones completas</a>
+      <a href="/docs/lessons/" class="resource-link"><span class="icon">📖</span> Índice de lecciones</a>
       <a href="/docs/online-editor-links/" class="resource-link"><span class="icon">🔗</span> Editores online</a>
-      <a href="/playground" class="resource-link"><span class="icon">▶</span> Java Playground</a>
-      <a href="scripts/" class="resource-link"><span class="icon">🎬</span> Guiones de video</a>
-      <a href="CONTRIBUTING.md" class="resource-link"><span class="icon">🤝</span> Contribuir</a>
+      <a href="/playground/" class="resource-link"><span class="icon">▶</span> Java Playground</a>
+      <a href="https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/scripts" class="resource-link"><span class="icon">🎬</span> Guiones de video</a>
+      <a href="/contributing/" class="resource-link"><span class="icon">🤝</span> Contribuir</a>
       <a href="https://github.com/JorgeVidVen/java-fundamentals-course-iceq" class="resource-link"><span class="icon">📦</span> Repositorio GitHub</a>
     </div>
   </section>
@@ -383,6 +384,23 @@ title: Java Fundamentals Course ICEQ — World Map
   </footer>
 
 </div>
+<!-- Mejora: modo visual propio para la landing autonoma sincronizado con la preferencia global. -->
+<script>
+  (function () {
+    var btn = document.getElementById('landingThemeToggle');
+    if (!btn) return;
+    var isDark = true;
+    try { isDark = localStorage.getItem('iceq-dark-mode') !== 'false'; } catch (e) {}
+    function apply() {
+      document.body.classList.toggle('light-mode', !isDark);
+      btn.textContent = isDark ? 'DAY' : 'NITE';
+      btn.setAttribute('aria-pressed', String(isDark));
+      btn.setAttribute('aria-label', isDark ? 'Cambiar a modo dia' : 'Cambiar a modo noche');
+    }
+    btn.addEventListener('click', function () { isDark = !isDark; try { localStorage.setItem('iceq-dark-mode', String(isDark)); } catch (e) {} apply(); });
+    apply();
+  })();
+</script>
 <!-- Mejora: persistencia local del progreso sin depender de servidor y con fallback seguro. -->
 <script>
   (function () {

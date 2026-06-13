@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Modo rapido para estudiantes"
+description: Minimal route to practice Java before reading the full material.
+---
+
 # Modo rápido para estudiantes
 
 Esta ruta sirve cuando tienes poco tiempo o cuando quieres practicar antes de leer la explicación completa.

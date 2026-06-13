@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 01: Primer programa en Java - Teoria"
+description: Minimal Java program structure, main method and console output.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB, solo si Replit no carga durante la sesión.
 
 ---
@@ -33,9 +35,9 @@ layout: lesson
 
 Esta primera lección debe resolver una ansiedad común: muchas personas creen que programar empieza memorizando palabras extrañas. En realidad, programar empieza entendiendo una relación simple:
 
-> Una persona escribe instrucciones.  
-> La computadora las revisa.  
-> Si las instrucciones tienen forma válida, las ejecuta.  
+> Una persona escribe instrucciones.
+> La computadora las revisa.
+> Si las instrucciones tienen forma válida, las ejecuta.
 > Si algo no encaja, muestra un error.
 
 Java es estricto, pero esa exigencia no es un obstáculo. Es una forma de recibir retroalimentación clara. El compilador no se burla del estudiante; señala una regla que todavía no se cumplió.
@@ -718,7 +720,7 @@ El objetivo inmediato es simple: que el estudiante llegue al laboratorio sabiend
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

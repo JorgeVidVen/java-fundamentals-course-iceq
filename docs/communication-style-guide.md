@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Guia de comunicacion del curso"
+description: Clear technical communication criteria for the course material.
+---
+
 # Glosario técnico del curso
 
 Este glosario resume términos usados durante el curso. El objetivo es mantener un lenguaje claro para estudiantes y para la revisión del material.

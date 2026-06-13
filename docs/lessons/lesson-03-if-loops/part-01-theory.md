@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 03: Condiciones y bucles - Teoria"
+description: Conditions, loops and control flow for Java decisions.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -640,7 +642,7 @@ Antes de pasar a la práctica, verifica que puedes explicar:
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

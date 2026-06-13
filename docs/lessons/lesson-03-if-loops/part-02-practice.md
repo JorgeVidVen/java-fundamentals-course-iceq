@@ -1,5 +1,8 @@
 ---
 layout: lesson
+title: "Leccion 03: Condiciones y bucles - Practica"
+description: Lab to create rules, hints and attempts with if and loops.
+has_compiler: true
 ---
 
 <p align="center">
@@ -20,7 +23,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -481,7 +484,7 @@ Sin estas piezas, un programa sería una secuencia fija de mensajes. Con estas p
 
 <div align="center">
 
-**Siguiente:** [Quiz de comprensión](part-03-quiz.md)
+**Siguiente:** [Quiz de comprensión](part-03-quiz/)
 
 </div>
 

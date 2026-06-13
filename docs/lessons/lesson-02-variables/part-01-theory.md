@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 02: Variables y tipos de datos - Teoria"
+description: Basic types, variables and formatted output in Java.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Archivo base:** `starter-files/lesson-02-variables/Main.java`.
 
 ---
@@ -723,7 +725,7 @@ Antes de decidir, el programa necesita datos. Por eso las variables son el puent
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

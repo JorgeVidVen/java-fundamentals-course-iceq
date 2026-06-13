@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Guia de entorno Replit"
+description: Instructions to prepare and run Java labs in Replit.
+---
+
 # Guía de entorno Replit
 
 Replit es el editor principal del curso porque permite escribir y ejecutar Java desde el navegador. No se necesita instalar Java, JDK, IntelliJ, Eclipse ni extensiones locales.

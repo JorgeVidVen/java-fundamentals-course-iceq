@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 06: Encapsulacion y proyecto final - Quiz"
+description: Review questions about integration, encapsulation and game rules.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -366,7 +368,7 @@ El programa podría funcionar, pero sería más difícil de explicar, corregir y
 
 ## Mini rúbrica
 
-| Criterio | Logrado | En proceso | Pendiente |
+| Criterio | Logrado | En proceso | Por completar |
 |---|---|---|---|
 | Explica `private`. |  |  |  |
 | Usa getters para leer datos. |  |  |  |
@@ -386,7 +388,7 @@ El programa podría funcionar, pero sería más difícil de explicar, corregir y
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 

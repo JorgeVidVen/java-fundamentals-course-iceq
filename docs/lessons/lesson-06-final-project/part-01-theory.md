@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 06: Encapsulacion y proyecto final - Teoria"
+description: Encapsulation, game classes and final project responsibilities.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -517,7 +519,7 @@ El mockup de consola muestra el tipo de experiencia final que se busca construir
 
 <div align="center">
 
-**Siguiente:** [Laboratorio en Replit](part-02-practice.md)
+**Siguiente:** [Laboratorio en Replit](part-02-practice/)
 
 </div>
 

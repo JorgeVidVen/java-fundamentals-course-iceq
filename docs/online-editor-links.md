@@ -1,18 +1,26 @@
+---
+layout: default
+title: "Online labs"
+description: Online editor options to practice Java lessons.
+---
+
 # Enlaces de laboratorios online
 
-Replit será la herramienta principal para todas las prácticas.
+Replit es la herramienta principal para todas las practicas. Si Replit no carga durante una sesion, usa JDoodle u OnlineGDB como respaldo y copia el archivo base de la leccion desde GitHub.
 
-| Lección | Replit principal | Respaldo | Estado |
+| Leccion | Replit principal | Respaldo | Codigo base |
 |---|---|---|---|
-| 01 | Pendiente | OnlineGDB | Por crear |
-| 02 | Pendiente | JDoodle | Por crear |
-| 03 | Pendiente | OnlineGDB | Por crear |
-| 04 | Pendiente | OnlineGDB | Por crear |
-| 05 | Pendiente | JDoodle | Por crear |
-| 06 | Pendiente | OnlineGDB | Por crear |
+| 01 | [Crear Repl Java](https://replit.com/new/java) | [OnlineGDB Java](https://www.onlinegdb.com/online_java_compiler) | [starter lesson 01](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-01-hello-world) |
+| 02 | [Crear Repl Java](https://replit.com/new/java) | [JDoodle Java](https://www.jdoodle.com/online-java-compiler) | [starter lesson 02](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-02-variables) |
+| 03 | [Crear Repl Java](https://replit.com/new/java) | [OnlineGDB Java](https://www.onlinegdb.com/online_java_compiler) | [starter lesson 03](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-03-if-loops) |
+| 04 | [Crear Repl Java](https://replit.com/new/java) | [OnlineGDB Java](https://www.onlinegdb.com/online_java_compiler) | [starter lesson 04](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-04-methods) |
+| 05 | [Crear Repl Java](https://replit.com/new/java) | [JDoodle Java](https://www.jdoodle.com/online-java-compiler) | [starter lesson 05](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-05-classes-objects) |
+| 06 | [Crear Repl Java](https://replit.com/new/java) | [OnlineGDB Java](https://www.onlinegdb.com/online_java_compiler) | [starter lesson 06](https://github.com/JorgeVidVen/java-fundamentals-course-iceq/tree/main/starter-files/lesson-06-final-project) |
 
-## Cómo usar esta tabla
+## Como usar esta tabla
 
-Mientras los enlaces oficiales estén pendientes, cada estudiante puede crear su propio Repl copiando los archivos de `starter-files` de la lección correspondiente.
-
-Cuando el equipo publique los laboratorios, esta tabla servirá como índice directo para abrir cada práctica. Los editores de respaldo se mantienen para casos en los que Replit no cargue durante una sesión.
+1. Abre el enlace de Replit.
+2. Copia los archivos de la carpeta base de la leccion.
+3. Ejecuta el programa una vez sin cambios.
+4. Completa la practica indicada en la leccion.
+5. Usa el editor de respaldo solo si Replit no esta disponible.

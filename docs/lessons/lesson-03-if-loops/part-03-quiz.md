@@ -1,5 +1,7 @@
 ---
 layout: lesson
+title: "Leccion 03: Condiciones y bucles - Quiz"
+description: Review questions about if, for, counters and expected output.
 ---
 
 <p align="center">
@@ -20,7 +22,7 @@ layout: lesson
 
 </div>
 
-> **Laboratorio principal:** Replit pendiente.  
+> **Laboratorio principal:** [Crear laboratorio online](/docs/online-editor-links/).
 > **Editor de respaldo:** OnlineGDB.
 
 ---
@@ -356,7 +358,7 @@ La palabra `Fin` aparece fuera del bucle porque solo se imprime una vez.
 
 ## Mini rúbrica
 
-| Criterio | Logrado | En proceso | Pendiente |
+| Criterio | Logrado | En proceso | Por completar |
 |---|---|---|---|
 | Distingue `=` de `==`. |  |  |  |
 | Explica qué hace `if`. |  |  |  |
@@ -376,7 +378,7 @@ La palabra `Fin` aparece fuera del bucle porque solo se imprime una vez.
 
 <div align="center">
 
-**Volver al [plan de curso](../../../course-plan.md)**
+**Volver al [plan de curso](/course-plan/)**
 
 </div>
 
