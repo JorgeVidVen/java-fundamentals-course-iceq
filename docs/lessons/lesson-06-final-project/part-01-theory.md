@@ -122,6 +122,8 @@ La aplicación final no introduce un lenguaje nuevo ni una herramienta nueva. In
 
 El proyecto se llama **Aventura del Número Secreto** porque el usuario intentará adivinar números en distintas rondas.
 
+La versión completa puede incluir decisiones pequeñas para hacerlo más entretenido: rol del jugador, dificultad y recompensas por nivel. Esas mejoras siguen usando los mismos fundamentos, por eso son buenas extensiones para principiantes.
+
 ---
 
 ## Arquitectura simple del proyecto

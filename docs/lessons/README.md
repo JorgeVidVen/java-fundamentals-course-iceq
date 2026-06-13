@@ -26,6 +26,8 @@ Cada lección se divide en tres archivos:
 
 Antes de iniciar los laboratorios, revisa la preparación del entorno en `../replit-lab-guide.md`. El código inicial está en `../../starter-files`. Las soluciones completas están en `../../completed-examples`.
 
+Si tienes poco tiempo, usa primero el [modo rápido](../quick-start-student.md). Si quieres registrar avance por niveles, usa el [mapa de misión](../student-mission-map.md).
+
 ## Ruta
 
 | Lección | Tema | Teoría | Práctica | Quiz |

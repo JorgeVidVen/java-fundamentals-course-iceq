@@ -43,6 +43,15 @@ La ruta empieza con programas mínimos y avanza hacia una aplicación de consola
 | Código fuente | GitHub público |
 | Entrega documental | Markdown exportado a PDF |
 
+## Ruta para estudiantes
+
+El material completo queda disponible para revisión, pero la experiencia recomendada para estudiantes empieza por una ruta más directa:
+
+1. Abrir [`docs/quick-start-student.md`](docs/quick-start-student.md).
+2. Completar una victoria visible por lección.
+3. Registrar avance en [`docs/student-mission-map.md`](docs/student-mission-map.md).
+4. Volver a la teoría y quiz solo cuando el laboratorio ya haya sido ejecutado.
+
 ## Secuencia de lecciones
 
 | Lección | Duración | Video del curso | Laboratorio Replit | Contenido | Producto |
@@ -82,8 +91,10 @@ La encapsulación protege reglas internas. El proyecto final integra entrada, m�
 
 ## Enlaces del repositorio
 
-- Repositorio GitHub público: pendiente.
+- Repositorio GitHub público: https://github.com/ICEQ2026/java-fundamentals-course-iceq
 - Contenido del estudiante: `docs/lessons/`.
+- Modo rápido para estudiantes: `docs/quick-start-student.md`.
+- Mapa de misión del estudiante: `docs/student-mission-map.md`.
 - Preparación del entorno Replit: `docs/replit-lab-guide.md`.
 - Código inicial Java: `starter-files/`.
 - Soluciones completas Java: `completed-examples/`.

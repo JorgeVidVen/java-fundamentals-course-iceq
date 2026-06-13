@@ -10,9 +10,29 @@ public class GameMessage {
         System.out.println("Proyecto final de consola en Java");
     }
 
-    public static void printRules(String playerName) {
+    public static void printRoleOptions(String[] roles) {
         System.out.println();
-        System.out.println("Hola, " + playerName + ". Tu misión es adivinar números secretos.");
+        System.out.println("Elige tu rol de aventura:");
+
+        for (int i = 0; i < roles.length; i++) {
+            System.out.println((i + 1) + ". " + roles[i]);
+        }
+    }
+
+    public static void printDifficultyOptions(String[] difficulties) {
+        System.out.println();
+        System.out.println("Elige dificultad:");
+
+        for (int i = 0; i < difficulties.length; i++) {
+            System.out.println((i + 1) + ". " + difficulties[i]);
+        }
+    }
+
+    public static void printRules(String playerName, String role, String difficulty) {
+        System.out.println();
+        System.out.println("Hola, " + playerName + ". Rol: " + role + ".");
+        System.out.println("Dificultad elegida: " + difficulty + ".");
+        System.out.println("Tu misión es adivinar números secretos.");
         System.out.println("Si fallas, pierdes una vida. Si aciertas, ganas puntos.");
         System.out.println("Usa las pistas para mejorar tus intentos.");
     }
@@ -42,6 +62,10 @@ public class GameMessage {
         System.out.println("¡Correcto! Ganaste " + points + " puntos.");
     }
 
+    public static void printArtifact(String artifactName) {
+        System.out.println("Recompensa desbloqueada: " + artifactName + ".");
+    }
+
     public static void printRoundLost(int secretNumber) {
         System.out.println("No adivinaste esta ronda. El número era " + secretNumber + ".");
     }
@@ -50,10 +74,20 @@ public class GameMessage {
         System.out.println();
         System.out.println("Resumen final");
         System.out.println("Jugador: " + player.getName());
+        System.out.println("Rol: " + player.getRole());
         System.out.println("Título: " + player.getTitle());
         System.out.println("Puntaje final: " + player.getScore());
         System.out.println("Rondas ganadas: " + player.getRoundsWon());
         System.out.println("Vidas restantes: " + player.getLives());
+
+        if (player.getRoundsWon() == 3) {
+            System.out.println("Cierre: completaste todos los niveles de la aventura.");
+        } else if (player.getScore() > 0) {
+            System.out.println("Cierre: avanzaste en la aventura y puedes mejorar tu puntaje.");
+        } else {
+            System.out.println("Cierre: vuelve a intentarlo usando las pistas de la consola.");
+        }
+
         System.out.println("Gracias por jugar y aprender Java.");
     }
 }

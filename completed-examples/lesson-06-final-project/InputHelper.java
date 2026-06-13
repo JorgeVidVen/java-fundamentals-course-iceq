@@ -14,8 +14,16 @@ public class InputHelper {
     }
 
     public String readText(String message) {
-        System.out.print(message);
-        return scanner.nextLine();
+        while (true) {
+            System.out.print(message);
+            String text = scanner.nextLine().trim();
+
+            if (!text.isEmpty()) {
+                return text;
+            }
+
+            System.out.println("Escribe al menos un caracter para continuar.");
+        }
     }
 
     public int readNumber(String message, int min, int max) {

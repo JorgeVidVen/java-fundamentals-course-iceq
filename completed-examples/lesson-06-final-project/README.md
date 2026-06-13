@@ -25,6 +25,7 @@ Esta carpeta contiene una solución completa para la lección 06. Debe usarse de
 |---|---|
 | Tema | private, getters, métodos públicos, arrays y proyecto integrado |
 | Producto | Aventura del Número Secreto |
+| Mejora de experiencia | Rol de jugador, dificultad y recompensas por nivel |
 | Editor sugerido | Replit |
 | Comparación recomendada | Revisar diferencias contra el código starter antes de copiar. |
 
@@ -42,6 +43,8 @@ Esta carpeta contiene una solución completa para la lección 06. Debe usarse de
 |---|---|
 | Compila sin errores. | El editor online muestra ejecución correcta. |
 | La salida coincide con la intención de la lección. | La consola muestra un resultado comprensible. |
+| El juego permite decisiones simples. | El usuario elige rol y dificultad antes de iniciar. |
+| Cada ronda entrega retroalimentación. | La consola muestra pistas, puntos y recompensas. |
 | El código es legible para secundaria. | Nombres claros y bloques cortos. |
 | La solución conserva el foco. | No introduce temas que pertenecen a otra lección. |
 

@@ -9,6 +9,11 @@ import java.util.Scanner;
  * Student work:
  * Add the missing final-project flow here after Player and InputHelper are
  * understood. Keep each responsibility in the class where it belongs.
+ *
+ * Optional adventure mode:
+ * After the base game works, add a role, a difficulty and a reward message.
+ * Keep those choices in Game, keep player state in Player and keep console
+ * text in GameMessage.
  */
 public class Game {
     private Scanner scanner;

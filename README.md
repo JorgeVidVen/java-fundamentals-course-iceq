@@ -23,6 +23,18 @@ Este repositorio contiene el material fuente para un curso introductorio de apro
 
 La herramienta principal de práctica es **Replit**. JDoodle y OnlineGDB quedan como respaldo operativo si Replit no está disponible durante una sesión.
 
+## Inicio rápido
+
+Si eres estudiante, empieza por una de estas rutas:
+
+| Ruta | Cuándo usarla | Enlace |
+|---|---|---|
+| Modo rápido | Quieres practicar sin leer todo el material primero. | [`docs/quick-start-student.md`](docs/quick-start-student.md) |
+| Mapa de misión | Quieres avanzar por niveles con insignias y retos. | [`docs/student-mission-map.md`](docs/student-mission-map.md) |
+| Lecciones completas | Quieres estudiar teoría, laboratorio y quiz por separado. | [`docs/lessons/`](docs/lessons/) |
+
+La recomendación para una primera sesión es: **modo rápido -> laboratorio -> quiz -> solución completa**.
+
 ## Estructura
 
 ```text
@@ -34,6 +46,8 @@ docs/
   replit-lab-guide.md
   online-editor-links.md
   communication-style-guide.md
+  quick-start-student.md
+  student-mission-map.md
   reference-notes.md
   lessons/
     lesson-XX-topic/
@@ -55,11 +69,12 @@ scripts/
 ## Orden recomendado
 
 1. Leer `course-plan.md`.
-2. Preparar el entorno con `docs/replit-lab-guide.md`.
-3. Estudiar cada lección desde `docs/lessons`.
-4. Crear un Repl por lección usando solo el código de `starter-files`.
-5. Comparar la práctica terminada con `completed-examples`.
-6. Revisar `course-plan.md` para enlaces pendientes y evidencias del curso.
+2. Revisar `docs/quick-start-student.md` para entender la ruta mínima.
+3. Preparar el entorno con `docs/replit-lab-guide.md`.
+4. Estudiar cada lección desde `docs/lessons`.
+5. Crear un Repl por lección usando solo el código de `starter-files`.
+6. Comparar la práctica terminada con `completed-examples`.
+7. Usar `docs/student-mission-map.md` para registrar avance y retos.
 
 
 >[!NOTE]
@@ -71,7 +86,7 @@ El curso usa español técnico claro. Se priorizan términos como biblioteca, re
 
 ## Estado pendiente
 
-- Enlace del repositorio GitHub público.
+- Enlace del repositorio GitHub público: https://github.com/ICEQ2026/java-fundamentals-course-iceq
 - Enlaces Replit por lección.
 - Enlaces YouTube no listados.
 - Reporte de participación del equipo.

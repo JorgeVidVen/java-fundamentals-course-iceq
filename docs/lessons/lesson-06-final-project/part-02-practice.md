@@ -51,7 +51,23 @@ La práctica final no busca añadir temas nuevos. Busca integrar lo aprendido en
 
 ## Reto de extensión
 
-Agrega una regla de vidas sin permitir que otro archivo escriba directamente lives = -1.
+Cuando el juego base funcione, agrega un **modo aventura** sin romper encapsulación:
+
+1. Un rol de jugador elegido al inicio.
+2. Una dificultad que cambie el rango del número secreto o los intentos.
+3. Una recompensa textual al ganar cada nivel.
+4. Un resumen final distinto según rondas ganadas o puntaje.
+
+Mantén la responsabilidad de cada clase:
+
+| Mejora | Clase sugerida |
+|---|---|
+| Rol, dificultad y avance de niveles | `Game` |
+| Nombre, puntaje, vidas y rondas ganadas | `Player` |
+| Lectura validada de opciones | `InputHelper` |
+| Textos de consola y recompensas | `GameMessage` |
+
+No permitas que otro archivo escriba directamente `lives = -1` o `score = -999`.
 
 ## Errores frecuentes y solución
 
@@ -70,6 +86,7 @@ La práctica queda lista cuando puedes mostrar:
 - El código starter modificado con intención clara.
 - Una explicación breve del error más importante que corregiste.
 - Una frase que conecte esta lección con el proyecto final.
+- Si hiciste el modo aventura, muestra rol, dificultad y una recompensa desbloqueada.
 
 ## Archivos del proyecto final
 

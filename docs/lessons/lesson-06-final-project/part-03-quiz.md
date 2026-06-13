@@ -64,10 +64,17 @@ Una mejora razonable cambia un dato, agrega una salida o refina una regla sin in
 
 </details>
 
+<details>
+<summary><strong>6. Si agregas dificultad, rol y recompensas, ¿dónde debería vivir cada cambio?</strong></summary>
+
+La dificultad y el avance de niveles pueden vivir en `Game`, porque afectan el flujo. El rol puede guardarse en `Player`, porque describe al jugador. Las recompensas y textos visibles pueden concentrarse en `GameMessage`.
+
+</details>
+
 ## Diagnóstico de encapsulación
 
 <details>
-<summary><strong>6. ¿Qué problema tiene este diseño?</strong></summary>
+<summary><strong>7. ¿Qué problema tiene este diseño?</strong></summary>
 
 ```java
 public class Player {
@@ -92,7 +99,7 @@ Luego se agregan métodos para leer o modificar datos con reglas.
 </details>
 
 <details>
-<summary><strong>7. ¿Por qué este método protege el puntaje?</strong></summary>
+<summary><strong>8. ¿Por qué este método protege el puntaje?</strong></summary>
 
 ```java
 public void addScore(int points) {
@@ -107,7 +114,7 @@ Porque no permite sumar valores negativos o cero. La regla queda dentro de `Play
 </details>
 
 <details>
-<summary><strong>8. ¿Qué diferencia hay entre getter y setter?</strong></summary>
+<summary><strong>9. ¿Qué diferencia hay entre getter y setter?</strong></summary>
 
 Un getter permite leer un dato:
 
@@ -142,21 +149,21 @@ Relaciona cada clase con su responsabilidad principal.
 | `GameMessage` | Agrupar mensajes de salida. |
 
 <details>
-<summary><strong>9. ¿Por qué no conviene que <code>Main</code> tenga toda la lógica?</strong></summary>
+<summary><strong>10. ¿Por qué no conviene que <code>Main</code> tenga toda la lógica?</strong></summary>
 
 Porque `Main` se volvería difícil de leer. Si todo vive ahí, cualquier cambio obliga a revisar una clase enorme. Un punto de entrada pequeño facilita entender dónde empieza el programa.
 
 </details>
 
 <details>
-<summary><strong>10. ¿Por qué <code>InputHelper</code> no debería calcular puntaje?</strong></summary>
+<summary><strong>11. ¿Por qué <code>InputHelper</code> no debería calcular puntaje?</strong></summary>
 
 Porque su responsabilidad es leer datos. Calcular puntaje pertenece a la lógica del juego o al objeto que protege el puntaje.
 
 </details>
 
 <details>
-<summary><strong>11. ¿Por qué <code>GameMessage</code> no debería leer teclado?</strong></summary>
+<summary><strong>12. ¿Por qué <code>GameMessage</code> no debería leer teclado?</strong></summary>
 
 Porque su responsabilidad es mostrar mensajes. Si también lee teclado, mezcla salida con entrada y se vuelve más difícil de mantener.
 
@@ -165,7 +172,7 @@ Porque su responsabilidad es mostrar mensajes. Si también lee teclado, mezcla s
 ## Detecta el error de diseño
 
 <details>
-<summary><strong>12. ¿Qué está mal en este fragmento?</strong></summary>
+<summary><strong>13. ¿Qué está mal en este fragmento?</strong></summary>
 
 ```java
 Player player = new Player("Ana");
@@ -183,7 +190,7 @@ player.addScore(10);
 </details>
 
 <details>
-<summary><strong>13. ¿Qué problema aparece si el constructor no asigna <code>name</code>?</strong></summary>
+<summary><strong>14. ¿Qué problema aparece si el constructor no asigna <code>name</code>?</strong></summary>
 
 ```java
 public Player(String name) {
@@ -205,7 +212,7 @@ public Player(String name) {
 </details>
 
 <details>
-<summary><strong>14. ¿Por qué se usa <code>this.name</code>?</strong></summary>
+<summary><strong>15. ¿Por qué se usa <code>this.name</code>?</strong></summary>
 
 Porque el parámetro y el atributo tienen el mismo nombre. `this.name` se refiere al atributo del objeto; `name` se refiere al parámetro recibido.
 
@@ -214,7 +221,7 @@ Porque el parámetro y el atributo tienen el mismo nombre. `this.name` se refier
 ## Completa el código
 
 <details>
-<summary><strong>15. Completa el constructor</strong></summary>
+<summary><strong>16. Completa el constructor</strong></summary>
 
 ```java
 public Player(String name) {
@@ -235,7 +242,7 @@ public Player(String name) {
 </details>
 
 <details>
-<summary><strong>16. Completa el getter de puntaje</strong></summary>
+<summary><strong>17. Completa el getter de puntaje</strong></summary>
 
 ```java
 public int getScore() {
@@ -254,7 +261,7 @@ public int getScore() {
 </details>
 
 <details>
-<summary><strong>17. Completa una llamada desde <code>Main</code> o <code>Game</code></strong></summary>
+<summary><strong>18. Completa una llamada desde <code>Main</code> o <code>Game</code></strong></summary>
 
 Objetivo: crear un jugador llamado Ana y sumar 10 puntos.
 
@@ -275,21 +282,21 @@ player.addScore(10);
 ## Arquitectura del proyecto final
 
 <details>
-<summary><strong>18. ¿Qué archivo revisarías si el programa no muestra bienvenida?</strong></summary>
+<summary><strong>19. ¿Qué archivo revisarías si el programa no muestra bienvenida?</strong></summary>
 
 Primero revisaría `Game.start()` para confirmar que llama a `GameMessage.printWelcome()`. Luego revisaría `GameMessage`.
 
 </details>
 
 <details>
-<summary><strong>19. ¿Qué archivo revisarías si el nombre del jugador aparece como <code>null</code>?</strong></summary>
+<summary><strong>20. ¿Qué archivo revisarías si el nombre del jugador aparece como <code>null</code>?</strong></summary>
 
 Revisaría `Player`, especialmente el constructor. Es probable que falte `this.name = name;`.
 
 </details>
 
 <details>
-<summary><strong>20. ¿Qué archivo revisarías si el programa falla al leer un número?</strong></summary>
+<summary><strong>21. ¿Qué archivo revisarías si el programa falla al leer un número?</strong></summary>
 
 Revisaría `InputHelper`, porque allí está centralizada la lectura de consola. Si el usuario escribe texto cuando el programa espera número, puede aparecer `NumberFormatException`.
 
@@ -298,14 +305,14 @@ Revisaría `InputHelper`, porque allí está centralizada la lectura de consola.
 ## Decisiones de mejora
 
 <details>
-<summary><strong>21. ¿Conviene agregar vidas, niveles o dificultad en esta entrega?</strong></summary>
+<summary><strong>22. ¿Conviene agregar vidas, niveles o dificultad en esta entrega?</strong></summary>
 
 Solo si no rompe el alcance del curso. Una mejora razonable debe reforzar variables, condiciones, métodos, clases o encapsulación. Si exige arreglos complejos que no se enseñaron, es mejor dejarla como idea futura.
 
 </details>
 
 <details>
-<summary><strong>22. ¿Qué mejora pequeña sí es coherente?</strong></summary>
+<summary><strong>23. ¿Qué mejora pequeña sí es coherente?</strong></summary>
 
 Agregar un mensaje final con nombre y puntaje:
 
@@ -319,7 +326,7 @@ Usa getters y refuerza encapsulación sin introducir temas avanzados.
 </details>
 
 <details>
-<summary><strong>23. ¿Qué mejora requiere más cuidado?</strong></summary>
+<summary><strong>24. ¿Qué mejora requiere más cuidado?</strong></summary>
 
 Validar entrada cuando el usuario escribe texto en lugar de número. Es útil, pero puede requerir `try/catch`, un tema que quizá no se explique con profundidad en este curso.
 
@@ -340,14 +347,14 @@ Game muestra resumen.
 ```
 
 <details>
-<summary><strong>24. ¿Qué principio se observa en ese flujo?</strong></summary>
+<summary><strong>25. ¿Qué principio se observa en ese flujo?</strong></summary>
 
 Separación de responsabilidades. Cada clase tiene un rol reconocible y el programa completo se entiende como colaboración entre clases.
 
 </details>
 
 <details>
-<summary><strong>25. ¿Qué pasaría si todas esas acciones estuvieran dentro de <code>Main</code>?</strong></summary>
+<summary><strong>26. ¿Qué pasaría si todas esas acciones estuvieran dentro de <code>Main</code>?</strong></summary>
 
 El programa podría funcionar, pero sería más difícil de explicar, corregir y ampliar. El objetivo de la lección no es solo que corra, sino que tenga una estructura razonable.
 

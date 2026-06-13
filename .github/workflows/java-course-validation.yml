@@ -1,0 +1,42 @@
+name: Java course validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  compile-lessons:
+    name: Compile lesson folders
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Compile each lesson independently
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for root in starter-files completed-examples; do
+            find "$root" -mindepth 1 -maxdepth 1 -type d | sort | while read -r lesson; do
+              echo "::group::Compiling $lesson"
+
+              if compgen -G "$lesson/*.java" > /dev/null; then
+                javac "$lesson"/*.java
+                find "$lesson" -name "*.class" -delete
+              else
+                echo "No Java files found in $lesson"
+              fi
+
+              echo "::endgroup::"
+            done
+          done

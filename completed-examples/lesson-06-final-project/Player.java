@@ -8,12 +8,18 @@ public class Player {
     private static final int INITIAL_LIVES = 5;
 
     private final String name;
+    private final String role;
     private int score;
     private int lives;
     private int roundsWon;
 
     public Player(String name) {
+        this(name, "Aprendiz de consola");
+    }
+
+    public Player(String name, String role) {
         this.name = name;
+        this.role = role;
         this.score = 0;
         this.lives = INITIAL_LIVES;
         this.roundsWon = 0;
@@ -21,6 +27,10 @@ public class Player {
 
     public String getName() {
         return this.name;
+    }
+
+    public String getRole() {
+        return this.role;
     }
 
     public int getScore() {
