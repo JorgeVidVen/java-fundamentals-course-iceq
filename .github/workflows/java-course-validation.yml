@@ -56,3 +56,9 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter
         env:
           JEKYLL_ENV: production
+
+      - name: Upload Gemfile.lock
+        uses: actions/upload-artifact@v4
+        with:
+          name: Gemfile.lock
+          path: Gemfile.lock
