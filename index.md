@@ -1028,7 +1028,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 100 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 7 min</span>
           </div>
-          <a href="docs/lessons/lesson-01-hello-world/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-1">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-01-hello-world/part-01-theory/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-1">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-2 -->
@@ -1048,7 +1048,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 150 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 9 min</span>
           </div>
-          <a href="docs/lessons/lesson-02-variables/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-2">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-02-variables/part-01-theory/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-2">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-3 -->
@@ -1068,7 +1068,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 200 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 10 min</span>
           </div>
-          <a href="docs/lessons/lesson-03-if-loops/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-3">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-03-if-loops/part-01-theory/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-3">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-4 -->
@@ -1088,7 +1088,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 250 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 10 min</span>
           </div>
-          <a href="docs/lessons/lesson-04-methods/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-4">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-04-methods/part-01-theory/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-4">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-5 -->
@@ -1108,7 +1108,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Puntos de práctica sugeridos">🪙 300 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 12 min</span>
           </div>
-          <a href="docs/lessons/lesson-05-classes-objects/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-5">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-05-classes-objects/part-01-theory/" class="btn-start" data-tooltip="Abrir teoría, práctica y quiz del World 1-5">▶ EMPEZAR</a>
         </article>
 
         <!-- WORLD 1-6 — FINAL BOSS -->
@@ -1128,7 +1128,7 @@ title: Java Fundamentals Course ICEQ — World Map
             <span class="meta-tag xp-tag" data-tooltip="Recompensa mayor por integrar todo el curso">🪙 500 XP</span>
             <span class="meta-tag duration-tag" data-tooltip="Tiempo estimado">⏱ 12 min</span>
           </div>
-          <a href="docs/lessons/lesson-06-final-project/" class="btn-start" data-tooltip="Abrir proyecto final y cerrar el mundo">▶ EMPEZAR</a>
+          <a href="docs/lessons/lesson-06-final-project/part-01-theory/" class="btn-start" data-tooltip="Abrir proyecto final y cerrar el mundo">▶ EMPEZAR</a>
         </article>
 
       </div>
@@ -1145,19 +1145,19 @@ title: Java Fundamentals Course ICEQ — World Map
         <span class="star-icon">🎨</span>
         <h4>Dibujo con texto</h4>
         <p>Crea arte ASCII en la consola usando solo <code>println</code></p>
-        <a href="docs/lessons/lesson-01-hello-world/part-02-practice.md" class="star-link">⭐ INTENTAR</a>
+        <a href="docs/lessons/lesson-01-hello-world/part-02-practice/" class="star-link">⭐ INTENTAR</a>
       </div>
       <div class="star-card" data-tooltip="Reto para dividir operaciones en métodos">
         <span class="star-icon">🧮</span>
         <h4>Calculadora completa</h4>
         <p>Suma, resta y multiplica usando métodos separados</p>
-        <a href="docs/lessons/lesson-04-methods/part-02-practice.md" class="star-link">⭐ INTENTAR</a>
+        <a href="docs/lessons/lesson-04-methods/part-02-practice/" class="star-link">⭐ INTENTAR</a>
       </div>
       <div class="star-card" data-tooltip="Reto final para personalizar la aventura">
         <span class="star-icon">🎮</span>
         <h4>Tu propio juego</h4>
         <p>Modifica el proyecto final con tu propia temática</p>
-        <a href="docs/lessons/lesson-06-final-project/part-02-practice.md" class="star-link">⭐ INTENTAR</a>
+        <a href="docs/lessons/lesson-06-final-project/part-02-practice/" class="star-link">⭐ INTENTAR</a>
       </div>
     </div>
   </section>
@@ -1233,9 +1233,9 @@ title: Java Fundamentals Course ICEQ — World Map
   ================================================================ -->
   <!-- Mejora: la Warp Zone funciona como navegación de atajos con tuberías CSS. -->
   <nav class="warp-zone reveal" aria-label="Warp Zone: atajos del curso">
-    <a href="docs/quick-start-student.md" class="pipe-link" data-tooltip="Ruta mínima para practicar sin leer todo">🟢 TUBERÍA — MODO RÁPIDO</a>
-    <a href="docs/student-mission-map.md" class="pipe-link" data-tooltip="Mapa con niveles, puntos e insignias">🟢 TUBERÍA — MAPA DE MISIÓN</a>
-    <a href="docs/replit-lab-guide.md" class="pipe-link" data-tooltip="Preparación de Replit antes de programar">🟢 TUBERÍA — GUÍA REPLIT</a>
+    <a href="/docs/quick-start-student/" class="pipe-link" data-tooltip="Ruta mínima para practicar sin leer todo">🟢 TUBERÍA — MODO RÁPIDO</a>
+    <a href="/docs/student-mission-map/" class="pipe-link" data-tooltip="Mapa con niveles, puntos e insignias">🟢 TUBERÍA — MAPA DE MISIÓN</a>
+    <a href="/docs/replit-lab-guide/" class="pipe-link" data-tooltip="Preparación de Replit antes de programar">🟢 TUBERÍA — GUÍA REPLIT</a>
   </nav>
 
   <!-- ================================================================
@@ -1261,11 +1261,11 @@ title: Java Fundamentals Course ICEQ — World Map
   <section class="resources-section reveal" aria-labelledby="resources-title">
     <h3 id="resources-title">📂 RECURSOS DEL CURSO</h3>
     <div class="resources-grid">
-      <a href="course-plan.md" class="resource-link"><span class="icon">📋</span> Plan del curso</a>
+      <a href="/course-plan/" class="resource-link"><span class="icon">📋</span> Plan del curso</a>
       <a href="starter-files/" class="resource-link"><span class="icon">💻</span> Código inicial</a>
       <a href="completed-examples/" class="resource-link"><span class="icon">✅</span> Soluciones completas</a>
       <a href="docs/lessons/" class="resource-link"><span class="icon">📖</span> Índice de lecciones</a>
-      <a href="docs/online-editor-links.md" class="resource-link"><span class="icon">🔗</span> Editores online</a>
+      <a href="/docs/online-editor-links/" class="resource-link"><span class="icon">🔗</span> Editores online</a>
       <a href="/playground" class="resource-link"><span class="icon">▶</span> Java Playground</a>
       <a href="scripts/" class="resource-link"><span class="icon">🎬</span> Guiones de video</a>
       <a href="CONTRIBUTING.md" class="resource-link"><span class="icon">🤝</span> Contribuir</a>
