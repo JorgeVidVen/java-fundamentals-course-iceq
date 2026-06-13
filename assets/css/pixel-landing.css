@@ -101,6 +101,54 @@ body::after {
   z-index: 1;
 }
 
+.landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem 0.85rem;
+  background: linear-gradient(180deg, #242457, #101020);
+  border: 4px solid var(--card-border);
+  border-bottom-color: var(--mario-red);
+  box-shadow: 5px 5px 0 #050512;
+}
+
+.landing-brand {
+  color: var(--coin-gold);
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.62rem, 1.4vw, 0.8rem);
+  text-shadow: 2px 2px 0 #050512;
+}
+
+.landing-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.landing-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.35rem 0.55rem;
+  color: var(--text-light);
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.24);
+}
+
+.landing-nav-links a:hover {
+  color: var(--coin-gold);
+  border-color: var(--coin-gold);
+  transform: translate(-1px, -1px);
+  text-decoration: none;
+}
+
 a { color: var(--sky-blue); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--coin-gold); }
 a:focus-visible,
@@ -916,6 +964,8 @@ progress::-moz-progress-bar {
    RESPONSIVE
    ================================================================ */
 @media (max-width: 860px) {
+  .landing-nav { align-items: flex-start; flex-direction: column; }
+  .landing-nav-links { justify-content: flex-start; }
   .level-grid { grid-template-columns: repeat(2, 1fr); }
   .map-connections { display: none; }
   .star-grid { grid-template-columns: 1fr; }
@@ -924,6 +974,9 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 540px) {
+  .landing-nav { padding: 0.65rem; }
+  .landing-nav-links { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+  .landing-nav-links a { justify-content: center; font-size: 0.6rem; }
   .level-grid { grid-template-columns: 1fr; }
   .level-card { padding: 1rem 0.8rem; }
   .controls-grid { grid-template-columns: 1fr 1fr; }
@@ -954,6 +1007,7 @@ progress::-moz-progress-bar {
   .mini-card:hover,
   .pipe-link:hover,
   .btn-start:hover,
+  .landing-nav-links a:hover,
   .landing-theme-toggle:hover {
     transform: none;
   }

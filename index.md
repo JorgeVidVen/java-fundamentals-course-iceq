@@ -46,6 +46,17 @@ title: Java Fundamentals Course ICEQ — World Map
 <a class="skip-link" href="#main-content">Saltar al contenido</a>
 <div class="wrapper">
 
+  <!-- Mejora visual: shell pixel compartido para que la landing conecte con lecciones, playground y plan. -->
+  <nav class="landing-nav reveal" aria-label="Rutas principales">
+    <a class="landing-brand" href="/">JAVA ICEQ</a>
+    <div class="landing-nav-links">
+      <a href="#world-map-title">Mundos</a>
+      <a href="/docs/lessons/">Lecciones</a>
+      <a href="/playground/">Playground</a>
+      <a href="/course-plan/">Plan</a>
+    </div>
+  </nav>
+
   <!-- ================================================================
        TITLE SCREEN
   ================================================================ -->
@@ -392,6 +403,7 @@ title: Java Fundamentals Course ICEQ — World Map
     var isDark = true;
     try { isDark = localStorage.getItem('iceq-dark-mode') !== 'false'; } catch (e) {}
     function apply() {
+      document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
       document.body.classList.toggle('light-mode', !isDark);
       btn.textContent = isDark ? 'DAY' : 'NITE';
       btn.setAttribute('aria-pressed', String(isDark));

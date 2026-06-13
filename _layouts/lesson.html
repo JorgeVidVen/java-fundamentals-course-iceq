@@ -3,25 +3,26 @@ layout: default
 ---
 
 <div class="lesson-container">
-  <aside class="lesson-sidebar" id="lessonSidebar" aria-label="Lesson navigation">
+  <aside class="lesson-sidebar" id="lessonSidebar" aria-label="Navegacion de la leccion">
     <nav class="sidebar-toc" aria-labelledby="tocTitle">
-      <h3 id="tocTitle">On this page</h3>
+      <h3 id="tocTitle">Mapa del nivel</h3>
       <ul id="tocList"></ul>
     </nav>
     <section class="sidebar-progress" aria-labelledby="progressTitle">
-      <h3 id="progressTitle">Progreso</h3>
-      <div class="mini-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Course progress" id="miniProgressBar">
+      <h3 id="progressTitle">Mundos completados</h3>
+      <div class="mini-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso del curso" id="miniProgressBar">
         <div class="mini-progress-fill" id="miniProgressFill" style="width: 0%"></div>
       </div>
       <span id="progressPercent">0%</span>
     </section>
     <div class="sidebar-nav">
-      <a href="{{ '/docs/lessons/' | relative_url }}" class="btn btn-small">All lessons</a>
+      <a href="{{ '/docs/lessons/' | relative_url }}" class="btn btn-small">Todos los mundos</a>
     </div>
   </aside>
 
   <article class="lesson-content">
     <div class="lesson-meta">
+      <span class="lesson-mode">ICEQ QUEST</span>
       <span class="lesson-badge" id="lessonBadge"></span>
       <span class="lesson-xp" id="lessonXP"></span>
     </div>

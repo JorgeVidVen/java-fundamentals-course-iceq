@@ -12,6 +12,7 @@
   const darkToggle = document.getElementById('darkModeToggle');
 
   function applyDarkMode(isDark) {
+    document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
     document.body.classList.toggle('dark-mode', isDark);
     if (!darkToggle) return;
     darkToggle.textContent = isDark ? '\u2600\uFE0F' : '\uD83C\uDF19';
@@ -19,7 +20,7 @@
     darkToggle.setAttribute('aria-label', isDark ? 'Desactivar modo oscuro' : 'Activar modo oscuro');
   }
 
-  applyDarkMode(safeGet('iceq-dark-mode') === 'true');
+  applyDarkMode(safeGet('iceq-dark-mode') !== 'false');
 
   if (darkToggle) {
     darkToggle.addEventListener('click', function() {
@@ -51,4 +52,33 @@
 
   updateGlobalProgress();
   window.addEventListener('iceq-progress-update', updateGlobalProgress);
+
+  const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll(
+    '#lessonBody > h2, #lessonBody > h3, #lessonBody > p, #lessonBody > ul, #lessonBody > ol, #lessonBody > pre, #lessonBody > table, #lessonBody > blockquote, #lessonBody > details, .quiz-question, .playground-tips, .playground-snippets'
+  );
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealTargets.forEach(function(item) {
+      item.classList.add('ui-reveal');
+      observer.observe(item);
+    });
+    window.setTimeout(function() {
+      revealTargets.forEach(function(item) {
+        item.classList.add('is-visible');
+      });
+    }, 900);
+  } else {
+    revealTargets.forEach(function(item) {
+      item.classList.add('is-visible');
+    });
+  }
 })();
