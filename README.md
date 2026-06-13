@@ -29,6 +29,7 @@ Si eres estudiante, empieza por una de estas rutas:
 
 | Ruta | Cuándo usarla | Enlace |
 |---|---|---|
+| Página de entrada | Quieres ver la ruta completa como portal del curso. | [`index.md`](index.md) |
 | Modo rápido | Quieres practicar sin leer todo el material primero. | [`docs/quick-start-student.md`](docs/quick-start-student.md) |
 | Mapa de misión | Quieres avanzar por niveles con insignias y retos. | [`docs/student-mission-map.md`](docs/student-mission-map.md) |
 | Lecciones completas | Quieres estudiar teoría, laboratorio y quiz por separado. | [`docs/lessons/`](docs/lessons/) |
