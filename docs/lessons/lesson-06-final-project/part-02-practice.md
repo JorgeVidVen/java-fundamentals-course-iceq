@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-06-banner.png" alt="Encapsulación y proyecto final" width="100%">
 </p>
@@ -39,6 +43,61 @@ La práctica final no busca añadir temas nuevos. Busca integrar lo aprendido en
 4. Lee la consola. Si aparece un error, úsalo como pista.
 
 > **Respaldo:** si Replit no está disponible, usa OnlineGDB copiando los archivos Java de esta carpeta. La entrega oficial debe mantener Replit como enlace principal.
+
+## Pruébalo aquí mismo 🚀
+
+El editor de abajo tiene el juego completo. Ejecútalo, juega unas partidas, luego modifícalo.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+import java.util.Scanner;
+import java.util.Random;
+
+class Player {
+    private String name;
+    private int score;
+    private int lives;
+
+    Player(String name) {
+        this.name = name;
+        this.score = 0;
+        this.lives = 3;
+    }
+
+    void addScore(int points) { score += points; }
+    boolean hasLives() { return lives > 0; }
+    void loseLife() { lives--; }
+    String getName() { return name; }
+    int getScore() { return score; }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        System.out.print("¿Cómo te llamas? ");
+        String name = sc.nextLine();
+        Player player = new Player(name);
+        int secret = rand.nextInt(10) + 1;
+        int guess;
+        do {
+            System.out.print("Adivina el número (1-10): ");
+            guess = sc.nextInt();
+            if (guess == secret) {
+                System.out.println("¡Correcto!");
+                player.addScore(100);
+                break;
+            } else {
+                System.out.println("Incorrecto.");
+                player.loseLife();
+            }
+        } while (player.hasLives());
+        System.out.println("Puntaje final: " + player.getScore());
+        sc.close();
+    }
+}
+</div>
+
+> **Nota:** la versión completa del proyecto final tiene 5 clases. Este editor es una versión simplificada para practicar. Usa Replit para el proyecto completo con varios archivos.
 
 ## Trabajo paso a paso
 

@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-06-banner.png" alt="Encapsulación y proyecto final" width="100%">
 </p>

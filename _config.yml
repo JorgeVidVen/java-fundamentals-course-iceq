@@ -1,3 +1,27 @@
 title: Java Fundamentals Course ICEQ
 description: Curso introductorio de Java para estudiantes de secundaria
-theme: jekyll-theme-cayman
+theme: null
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+defaults:
+  - scope:
+      path: "docs/lessons"
+      type: "pages"
+    values:
+      layout: lesson
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - course-plan.md
+  - scripts/
+  - starter-files/
+  - completed-examples/
+  - vendor/

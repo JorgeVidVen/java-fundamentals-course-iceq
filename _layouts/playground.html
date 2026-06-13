@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+<div class="playground-container">
+  <h1 class="playground-title">☕ Java Playground</h1>
+  <p class="playground-subtitle">Escribe, ejecuta y prueba código Java directamente en tu navegador.</p>
+
+  <div id="jdoodle-playground" data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, Java ICEQ! 🚀");
+    }
+}
+  </div>
+
+  <div class="playground-tips">
+    <h3>💡 Ideas para experimentar</h3>
+    <ul>
+      <li>Modifica el mensaje dentro de <code>println</code></li>
+      <li>Agrega una segunda línea con <code>System.out.println("otro mensaje");</code></li>
+      <li>Crea una variable <code>int</code> y asígnale un valor</li>
+      <li>Escribe un <code>if</code> que compare dos números</li>
+      <li>Crea un bucle <code>for</code> que cuente del 1 al 10</li>
+    </ul>
+  </div>
+
+  <div class="playground-snippets">
+    <h3>📋 Ejemplos rápidos</h3>
+    <div class="snippet-grid">
+      <button class="snippet-btn" data-code="variables">Variables</button>
+      <button class="snippet-btn" data-code="ifelse">if / else</button>
+      <button class="snippet-btn" data-code="loop">Bucle for</button>
+      <button class="snippet-btn" data-code="method">Métodos</button>
+      <button class="snippet-btn" data-code="class">Clases</button>
+      <button class="snippet-btn" data-code="scanner">Scanner</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const snippets = {
+  variables: `public class Main {
+    public static void main(String[] args) {
+        String name = "Ana";
+        int age = 16;
+        double height = 1.65;
+        boolean active = true;
+        System.out.println("Nombre: " + name);
+        System.out.println("Edad: " + age);
+        System.out.println("Altura: " + height);
+        System.out.println("Activo: " + active);
+    }
+}`,
+  ifelse: `public class Main {
+    public static void main(String[] args) {
+        int score = 85;
+        if (score >= 90) {
+            System.out.println("Excelente");
+        } else if (score >= 70) {
+            System.out.println("Bien hecho");
+        } else {
+            System.out.println("Sigue practicando");
+        }
+    }
+}`,
+  loop: `public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Intento #" + i);
+        }
+    }
+}`,
+  method: `public class Main {
+    public static void main(String[] args) {
+        int result = add(10, 5);
+        System.out.println("10 + 5 = " + result);
+    }
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}`,
+  class: `class Player {
+    String name;
+    int score;
+
+    Player(String name) {
+        this.name = name;
+        this.score = 0;
+    }
+
+    void addScore(int points) {
+        score += points;
+    }
+
+    void showStatus() {
+        System.out.println(name + " tiene " + score + " puntos");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Player p = new Player("Mario");
+        p.addScore(100);
+        p.showStatus();
+    }
+}`,
+  scanner: `import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("¿Cómo te llamas? ");
+        String name = sc.nextLine();
+        System.out.println("¡Bienvenido, " + name + "!");
+        sc.close();
+    }
+}`
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.snippet-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const key = this.dataset.code;
+      const code = snippets[key];
+      if (code) {
+        // Update JDoodle via postMessage
+        const iframe = document.querySelector('#jdoodle-playground iframe');
+        if (iframe) {
+          iframe.contentWindow.postMessage({
+            event: 'setCode',
+            data: code
+          }, '*');
+        }
+      }
+    });
+  });
+});
+</script>

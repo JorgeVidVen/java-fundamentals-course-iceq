@@ -1266,6 +1266,7 @@ title: Java Fundamentals Course ICEQ — World Map
       <a href="completed-examples/" class="resource-link"><span class="icon">✅</span> Soluciones completas</a>
       <a href="docs/lessons/" class="resource-link"><span class="icon">📖</span> Índice de lecciones</a>
       <a href="docs/online-editor-links.md" class="resource-link"><span class="icon">🔗</span> Editores online</a>
+      <a href="/playground" class="resource-link"><span class="icon">▶</span> Java Playground</a>
       <a href="scripts/" class="resource-link"><span class="icon">🎬</span> Guiones de video</a>
       <a href="CONTRIBUTING.md" class="resource-link"><span class="icon">🤝</span> Contribuir</a>
       <a href="https://github.com/JorgeVidVen/java-fundamentals-course-iceq" class="resource-link"><span class="icon">📦</span> Repositorio GitHub</a>

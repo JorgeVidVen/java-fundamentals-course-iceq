@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-03-banner.png" alt="Condiciones y bucles" width="100%">
 </p>

@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-02-banner.png" alt="Variables y tipos de datos" width="100%">
 </p>
@@ -46,6 +50,29 @@ Registro generado en Java
 ```
 
 Lo importante no es la ficha en sí. Lo importante es entender que cada dato vive en una variable con tipo y nombre.
+
+---
+
+## Pruébalo aquí mismo 🚀
+
+El editor de abajo ya tiene el código base con variables. Modifica los valores, presiona **Run** y ve el resultado.
+
+<div data-pym-src="https://www.jdoodle.com/plugin" data-language="java" data-version-index="4">
+public class Main {
+    public static void main(String[] args) {
+        String studentName = "Valeria";
+        int age = 15;
+        double averageGrade = 18.5;
+        boolean active = true;
+        System.out.println("Nombre: " + studentName);
+        System.out.println("Edad: " + age);
+        System.out.println("Promedio: " + averageGrade);
+        System.out.println("Activo: " + active);
+    }
+}
+</div>
+
+> **Consejo:** cambia los valores de las variables y presiona Run otra vez.
 
 ---
 

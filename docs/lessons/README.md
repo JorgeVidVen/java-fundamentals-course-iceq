@@ -1,46 +1,21 @@
-<p align="center">
-  <img src="../../assets/banner.png" alt="Java Fundamentals Course ICEQ" width="100%">
-</p>
-
-<div align="center">
+---
+layout: default
+title: Lecciones - Java Fundamentals Course ICEQ
+---
 
 # Lecciones
 
-### Ruta de estudio para estudiantes
+Cada lección tiene tres partes: **Teoría** → **Práctica** → **Quiz**. Las prácticas ahora incluyen un compilador Java embebido para que puedas programar sin salir del navegador.
 
-[![Editor](https://img.shields.io/badge/Editor_principal-Replit-blueviolet?style=flat-square)](#)
-[![Nivel](https://img.shields.io/badge/Nivel-Principiante-brightgreen?style=flat-square)](#)
-[![Formato](https://img.shields.io/badge/Formato-Teoría_|_Práctica_|_Quiz-lightgrey?style=flat-square)](#)
-
-</div>
-
----
-
-## Cómo estudiar
-
-Cada lección se divide en tres archivos:
-
-1. `part-01-theory.md`: lectura guiada, conceptos y ejemplos.
-2. `part-02-practice.md`: laboratorio para trabajar en Replit.
-3. `part-03-quiz.md`: preguntas, casos y autoevaluación.
-
-Antes de iniciar los laboratorios, revisa la preparación del entorno en `../replit-lab-guide.md`. El código inicial está en `../../starter-files`. Las soluciones completas están en `../../completed-examples`.
-
-Si tienes poco tiempo, usa primero el [modo rápido](../quick-start-student.md). Si quieres registrar avance por niveles, usa el [mapa de misión](../student-mission-map.md).
-
-## Ruta
-
-| Lección | Tema | Teoría | Práctica | Quiz |
+| Lección | Tema | Teoría | Práctica (con compilador 🚀) | Quiz |
 |---|---|---|---|---|
-| 01 | Primer programa en Java | [Abrir](lesson-01-hello-world/part-01-theory.md) | [Abrir](lesson-01-hello-world/part-02-practice.md) | [Abrir](lesson-01-hello-world/part-03-quiz.md) |
-| 02 | Variables y tipos de datos | [Abrir](lesson-02-variables/part-01-theory.md) | [Abrir](lesson-02-variables/part-02-practice.md) | [Abrir](lesson-02-variables/part-03-quiz.md) |
-| 03 | Condiciones y bucles | [Abrir](lesson-03-if-loops/part-01-theory.md) | [Abrir](lesson-03-if-loops/part-02-practice.md) | [Abrir](lesson-03-if-loops/part-03-quiz.md) |
-| 04 | Métodos y entrada por consola | [Abrir](lesson-04-methods/part-01-theory.md) | [Abrir](lesson-04-methods/part-02-practice.md) | [Abrir](lesson-04-methods/part-03-quiz.md) |
-| 05 | Clases y objetos | [Abrir](lesson-05-classes-objects/part-01-theory.md) | [Abrir](lesson-05-classes-objects/part-02-practice.md) | [Abrir](lesson-05-classes-objects/part-03-quiz.md) |
-| 06 | Encapsulación y proyecto final | [Abrir](lesson-06-final-project/part-01-theory.md) | [Abrir](lesson-06-final-project/part-02-practice.md) | [Abrir](lesson-06-final-project/part-03-quiz.md) |
+| 01 | Primer programa en Java | [Abrir](lesson-01-hello-world/part-01-theory/) | [Abrir](lesson-01-hello-world/part-02-practice/) | [Abrir](lesson-01-hello-world/part-03-quiz/) |
+| 02 | Variables y tipos de datos | [Abrir](lesson-02-variables/part-01-theory/) | [Abrir](lesson-02-variables/part-02-practice/) | [Abrir](lesson-02-variables/part-03-quiz/) |
+| 03 | Condiciones y bucles | [Abrir](lesson-03-if-loops/part-01-theory/) | [Abrir](lesson-03-if-loops/part-02-practice/) | [Abrir](lesson-03-if-loops/part-03-quiz/) |
+| 04 | Métodos y entrada por consola | [Abrir](lesson-04-methods/part-01-theory/) | [Abrir](lesson-04-methods/part-02-practice/) | [Abrir](lesson-04-methods/part-03-quiz/) |
+| 05 | Clases y objetos | [Abrir](lesson-05-classes-objects/part-01-theory/) | [Abrir](lesson-05-classes-objects/part-02-practice/) | [Abrir](lesson-05-classes-objects/part-03-quiz/) |
+| 06 | Encapsulación y proyecto final | [Abrir](lesson-06-final-project/part-01-theory/) | [Abrir](lesson-06-final-project/part-02-practice/) | [Abrir](lesson-06-final-project/part-03-quiz/) |
 
 ## Recomendación
 
 No abras la solución completa antes de intentar la práctica. El valor del curso está en ejecutar, equivocarse, leer el error y corregir.
-
-

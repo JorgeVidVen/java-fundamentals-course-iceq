@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-04-banner.png" alt="Métodos y entrada por consola" width="100%">
 </p>

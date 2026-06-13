@@ -1,3 +1,7 @@
+---
+layout: lesson
+---
+
 <p align="center">
   <img src="../../../assets/lesson-02-banner.png" alt="Variables y tipos de datos" width="100%">
 </p>
