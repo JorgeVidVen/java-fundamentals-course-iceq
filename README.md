@@ -21,7 +21,7 @@
 
 Este repositorio contiene el material fuente para un curso introductorio de aproximadamente una hora sobre fundamentos de Java y Programación Orientada a Objetos. Está orientado a estudiantes de secundaria sin experiencia previa.
 
-La herramienta principal de práctica es **Replit**. JDoodle y OnlineGDB quedan como respaldo operativo si Replit no está disponible durante una sesión.
+La herramienta principal de práctica es **Replit**. OnlineGDB queda como respaldo operativo si Replit no está disponible durante una sesión. Los enlaces directos a starters y soluciones están en `docs/online-editor-links.md`.
 
 ## Estructura
 
@@ -55,7 +55,7 @@ scripts/
 ## Orden recomendado
 
 1. Leer `course-plan.md`.
-2. Preparar el entorno con `docs/replit-lab-guide.md`.
+2. Preparar el entorno con `docs/replit-lab-guide.md` y revisar `docs/online-editor-links.md`.
 3. Estudiar cada lección desde `docs/lessons`.
 4. Crear un Repl por lección usando solo el código de `starter-files`.
 5. Comparar la práctica terminada con `completed-examples`.
@@ -72,7 +72,7 @@ El curso usa español técnico claro. Se priorizan términos como biblioteca, re
 ## Estado pendiente
 
 - Enlace del repositorio GitHub público.
-- Enlaces Replit por lección.
+- Enlaces Replit por lección, si se publican como editor principal.
 - Enlaces YouTube no listados.
 - Reporte de participación del equipo.
 

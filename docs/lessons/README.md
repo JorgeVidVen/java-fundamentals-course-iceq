@@ -24,7 +24,7 @@ Cada lección se divide en tres archivos:
 2. `part-02-practice.md`: laboratorio para trabajar en Replit.
 3. `part-03-quiz.md`: preguntas, casos y autoevaluación.
 
-Antes de iniciar los laboratorios, revisa la preparación del entorno en `../replit-lab-guide.md`. El código inicial está en `../../starter-files`. Las soluciones completas están en `../../completed-examples`.
+Antes de iniciar los laboratorios, revisa la preparación del entorno en `../replit-lab-guide.md`. Los enlaces OnlineGDB para starters y soluciones están en `../online-editor-links.md`. El código inicial está en `../../starter-files`. Las soluciones completas están en `../../completed-examples`.
 
 ## Ruta
 
